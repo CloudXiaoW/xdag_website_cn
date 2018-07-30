@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script type="text/javascript">
+      document.documentElement.className = "js";
+    </script>
+    <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>XDAG | A new DAG-based cryptocurrency</title>
+<meta name="generator" content="Jekyll v3.8.1" />
+<meta property="og:title" content="XDAG" />
+<meta name="author" content="Xdag.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="XDAG是一种新的有向无环图（DAG）技术的应用，它解决了当前区块链技术面临的问题。" />
+<meta property="og:description" content="XDAG是一种新的有向无环图（DAG）技术的应用，它解决了当前区块链技术面临的问题。" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="XDAG" />
+<meta property="og:image" content="http://localhost:4000/assets/images/default-card.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@XDAG_Community" />
+<meta name="twitter:creator" content="@XDAG_Community" />
+<meta property="article:publisher" content="https://www.facebook.com/XDAG.Dagger.Community/" />
+<script type="application/ld+json">
+{"name":"XDAG","description":"XDAG是一种新的有向无环图（DAG）技术的应用，它解决了当前区块链技术面临的问题。","author":{"@type":"Person","name":"Xdag.io"},"@type":"WebSite","url":"http://localhost:4000/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Xdag.io"},"image":"http://localhost:4000/assets/images/default-card.png","headline":"XDAG","sameAs":["https://t.me/dagger_cryptocurrency","https://www.facebook.com/XDAG.Dagger.Community/","https://twitter.com/XDAG_Community","https://discord.gg/YxXUVQJ","https://www.reddit.com/r/xdag/","https://github.com/orgs/XDagger"],"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link href="/assets/images/fav/favicon.png" rel="icon">
+    <link href="/assets/images/fav/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="/assets/lib/animate/animate.css" rel="stylesheet" >
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/assets/css/home.css" rel="stylesheet">
+</head>
+
+<body>
+<header id="header" class="js-header">
+    <div id="logo">
+        <a href="/index.html">
+            <img src="/assets/images/logo.svg" height="70" alt="Dagger" />
+        </a>
+    </div>
+    <input class="display-toggle js-nav-main-toggle" type="checkbox" id="nav-main-toggle">
+    <label class="nav-main-icon" for="nav-main-toggle"></label>
+    <nav class="nav-main-container" role="navigation">
+        <ul class="nav-main js-nav-main">
+            <li class="js-nav-no-sublevel">
+                <a href="/index.html">首页</a>
+            </li>
+            <li class="js-nav-has-sublevel">
+                <input class="display-toggle" type="checkbox" id="nav-getstarted-toggle">
+                <label class="nav-sublevel-label js-nav-sublevel-label" for="nav-getstarted-toggle" tabindex="0">入门</label>
+                <ul id="nav-getstarted" class="nav-sublevel js-nav-sublevel">
+                    <li><a href="/index.html#wallet">钱包</a></li>
+                    <li><a href="/index.html#services">挖矿</a></li>
+                </ul>
+            </li>
+            <li class="js-nav-no-sublevel">
+                <a href="http://www.xdagscan.com/" target="_blank">浏览器</a>
+            </li>
+            <li class="js-nav-has-sublevel">
+                <input class="display-toggle" type="checkbox" id="nav-resources-toggle">
+                <label class="nav-sublevel-label js-nav-sublevel-label" for="nav-resources-toggle" tabindex="0">资源</label>
+                <ul id="nav-resources" class="nav-sublevel js-nav-sublevel">
+                    <li><a href="/assets/images/whitepaper.pdf" target="_blank">白皮书</a></li>
+                    <li><a href="https://github.com/XDagger/xdag/releases" target="_blank">最新发布</a></li>
+                    <li><a href="/index.html#roadmap">路线图</a></li>
+                </ul>
+            </li>
+            <li class="js-nav-has-sublevel">
+                <input class="display-toggle" type="checkbox" id="nav-community-toggle">
+                <label class="nav-sublevel-label js-nav-sublevel-label" for="nav-community-toggle" tabindex="0">社区</label>
+                <ul id="nav-community" class="nav-sublevel js-nav-sublevel">
+                    <li><a href="/index.html#community">社交频道</a></li>
+                </ul>
+            </li>
+            <li class="js-nav-has-sublevel">
+                <input class="display-toggle" type="checkbox" id="nav-lang-toggle">
+                <label class="nav-sublevel-label js-nav-sublevel-label" for="nav-lang-toggle" tabindex="0"><img src="/assets/images/lang/cn.png" alt=""></label>
+                <ul id="nav-lang" class="nav-sublevel js-nav-sublevel">
+                    <li><a href="https://xdag.io"><img src="/assets/images/lang/en.png" alt="">US</a></li>
+                    <li><a href="/index.html"><img src="/assets/images/lang/cn.png" alt="">CN</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-overlay"></div>
+</header>
+<div class="header-bg"></div>
+<div class="mask"></div>
+<div class="playbrdr">
+    <div class="videoclose"><i class="ion-ios-close-outline" ></i></div>
+    <iframe src="" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+<section id="intro">
+    <div class="intro-container">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators"></ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="background-image: url(/assets/images/banner/1.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>XDAG:基于DAG的全新数字加密货币</h2>
+                            <p>XDAG是一种新的有向无环图（DAG）技术的应用，它解决了当前区块链技术面临的问题. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item " style="background-image: url(/assets/images/banner/2.png);">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>第一个可挖的DAG</h2>
+                            <p style="white-space:nowrap;">主链的设计理念:区块 = 交易 = 地址 <br/>每64秒产生新的货币</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url(/assets/images/banner/3.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>无预挖、无ICO</h2>
+                            <p>XDAG提供了尖端技术，解决了其他加密货币面临的问题提供了去中心化的解决方案。XDAG没有预挖,没有ICO，是一个真正的社区驱动项目，由一个有着共同的目标和具有创新精神的开发团队开发.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+<main id="main">
+    <section id="about">
+        <div class="container">
+            <header class="section-header">
+                <h3>关于 Dagger</h3>
+                <p>Dagger是基于DAG的新一代分布式分类账本. DAG,有向无环图, 是在分布式的分散环境中在人们中发送数据的另一种方法。这样做没有区块链，允许更大的可扩展性.</p>
+            </header>
+            <div class="row about-cols">
+                
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0s">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="/assets/images/about-mining.jpg" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-unlocked-outline"></i></div>
+                        </div>
+                        <h2 class="title">CPU/GPU可开采</h2>
+                        <p>XDAG可以使用CPU、GPU开采，是第一个可开采的DAG项目。</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="/assets/images/about-mission.jpg" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-unlocked-outline"></i></div>
+                        </div>
+                        <h2 class="title">隐私</h2>
+                        <p>XDAG致力于整合隐私特征。这是2018条路线图的一部分。</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="/assets/images/about-plan.jpg" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-unlocked-outline"></i></div>
+                        </div>
+                        <h2 class="title">智能合约</h2>
+                        <p>XDAG正在添加智能合约。</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <header class="section-header wow fadeInUp">
+                <h3>挖矿快速入门</h3>
+                <p>第一个可挖矿的DAG. 根据以下步骤，如果你需要任何问题，可以直接联系我们。</p>
+            </header>
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="icon"><i class="ion-ios-cloud-download-outline"></i></div>
+                    <h4 class="title">
+                        <a href="#wallet">下载钱包</a>
+                        
+                        
+                    </h4>
+                    <p class="description">首先, 在下面先下载钱包.</p>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.5s">
+                    <div class="icon"><i class="ion-ios-videocam-outline"></i></div>
+                    <h4 class="title">
+                        
+                        <a class="playvideo">了解过程</a>
+                        
+                    </h4>
+                    <p class="description">下一步观看易于学习的教学视频.</p>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.6s">
+                    <div class="icon"><i class="ion-ios-paper-outline"></i></div>
+                    <h4 class="title">
+                        
+                        
+                        <a class="pool js-pool-info-toggle" data-toggle="collapse" data-target="#pool-info-wrapper" aria-expanded="false" aria-controls="pool-info-wrapper">选择一个矿池</a>
+                    </h4>
+                    <p class="description">点击展开，可以使用以下列出的这些已认证的矿池.</p>
+                </div>
+                
+            </div>
+            <div class="collBg collapse" id="pool-info-wrapper">
+                <div class="row collTit">
+                    <div class="col span_12  left">
+                        <div>
+                            <p class="pStrong">费率介绍:</p>
+                            <hr />
+                            <p >例如: IP | (
+                                <span class="purple">1%<sup><span class="brdr"><span class="sup">1</span></span></sup></span> -
+                                <span class="black">1%<sup><span class="brdr"><span class="sup">2</span></span></sup></span> -
+                                <span class="dark">1%<sup><span class="brdr"><span class="sup">3</span></span></sup></span> -
+                                <span class="blue">1%<sup><span class="brdr"><span class="sup">4</span></span></sup></span>) | 矿池链接 | 矿池所在地 | 管理员</p>
+                            <hr />
+                            <ul class="row">
+                                <li class="col-lg-7 purple"><span class="brdrbtm"><span class="sup2">1</span> </span><span class="purple">1%</span> 矿池费率.</li>
+                                <li class="col-lg-5 black"><span class="brdrbtm"><span class="sup2">2</span></span><span class="black">1%</span>对于发现块的矿工的奖励</li>
+                                <li class="col-lg-7 dark"><span class="brdrbtm"><span class="sup2">3</span></span><span class="dark">1%</span>对直接贡献发现块的矿工奖励</li>
+                                <li class="col-lg-5 blue"><span class="brdrbtm"><span class="sup2">4</span></span><span class="blue">1%</span> 基金会社区费率.</li>
+                            </ul>
+                            <p class="collbtm">友情提示：在例子中的96%，将在矿池的所有矿工中分享。</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="row poollist">
+                    <div class="col span_12  left">
+                        <h5>以下所列出的所有矿池都对基金会有捐赠贡献：</h5>
+                        <div class="plist">
+                            
+                            <p>
+                                <span class="ip">xdagmine.com:13654</span>
+                                <span> | (</span><span class="purple">1%</span><span>-</span><span class="black">1%</span><span>-</span><span class="dark">1%</span><span>-</span><span class="blue">1%</span><span>) | </span>
+                                
+                                <a class="web" href="http://www.xdagmine.com" target="_blank">http://www.xdagmine.com/</a>
+                                <span> | </span>
+                                 
+                                <span class="country">新加坡</span>
+                                <span> | </span>
+                                <span class="name">Edward</span>
+                                <span class="pool-state">
+                                 矿池状态: <span class="js-pool-state" data-url="http://www.xdagmine.com/state.txt"></span>
+                                </span>
+                            </p>
+                            
+                            <p>
+                                <span class="ip">cn.xdag.vspool.com:13654</span>
+                                <span> | (</span><span class="purple">1%</span><span>-</span><span class="black">5%</span><span>-</span><span class="dark">10%</span><span>-</span><span class="blue">1%</span><span>) | </span>
+                                
+                                <a class="web" href="https://www.vspool.com/xdag/" target="_blank">https://www.vspool.com/xdag/</a>
+                                <span> | </span>
+                                 
+                                <span class="country">新加坡</span>
+                                <span> | </span>
+                                <span class="name">Laywon</span>
+                                <span class="pool-state">
+                                 矿池状态: <span class="js-pool-state" data-url="http://139.99.124.23/state.txt"></span>
+                                </span>
+                            </p>
+                            
+                            <p>
+                                <span class="ip">pool.xdagcn.com:13654</span>
+                                <span> | (</span><span class="purple">1%</span><span>-</span><span class="black">5%</span><span>-</span><span class="dark">10%</span><span>-</span><span class="blue">1%</span><span>) | </span>
+                                
+                                <a class="web" href="http://xdagcn.com/" target="_blank">http://xdagcn.com/</a>
+                                <span> | </span>
+                                 
+                                <span class="country">加拿大</span>
+                                <span> | </span>
+                                <span class="name">James-Lu</span>
+                                <span class="pool-state">
+                                 矿池状态: <span class="js-pool-state" data-url="http://54.39.28.77/state.txt"></span>
+                                </span>
+                            </p>
+                            
+                            <p>
+                                <span class="ip">feipool.xyz:13654</span>
+                                <span> | (</span><span class="purple">1%</span><span>-</span><span class="black">0%</span><span>-</span><span class="dark">0%</span><span>-</span><span class="blue">1%</span><span>) | </span>
+                                
+                                <a class="web" href="http://feipool.xyz/" target="_blank">http://feipool.xyz/</a>
+                                <span> | </span>
+                                 
+                                <span class="country">加拿大</span>
+                                <span> | </span>
+                                <span class="name">水哥</span>
+                                <span class="pool-state">
+                                 矿池状态: <span class="js-pool-state" data-url="http://feipool.xyz/state.txt"></span>
+                                </span>
+                            </p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="wallet"  class="section-bg" >
+        <div class="container">
+            <header class="section-header">
+                <h3 class="section-title">钱包</h3>
+                <p>如果您需要帮助选择正确的版本，请打开您的PC并查找系统类型，然后为您的操作系统选择合适的版本。</p>
+            </header>
+            <div class="row justify-content-center portfolio-container">
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-info">
+                            <div class="icons"><i class="ion-social-windows-outline"></i></div>
+                            <h4><a href="https://github.com/XDagger/xdag/files/2186514/XDag.x64.zip" target="_blank">64位钱包</a></h4>
+                            <p>64位Windows控制台和GUI可执行文件(x64)。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-info">
+                            <div class="icons"><i class="ion-social-windows-outline"></i></div>
+                            <h4><a href="https://github.com/XDagger/xdag/files/2186515/XDag.x86.zip" target="_blank">32位钱包</a></h4>
+                            <p>32位Windows控制台和GUI可执行文件(x86)。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-info">
+                            <div class="icons"><i class="ion-social-apple-outline"></i></div>
+                            <h4><a href="https://github.com/XDagger/xdag/files/2180609/xdag.0.2.5.zip" target="_blank">MacOS钱包</a></h4>
+                            <p>MacOS命令行钱包。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-info">
+                            <div class="icons"><i class="ion-social-windows"></i></div>
+                            <h4><a href="https://github.com/jonano614/DaggerGpuMiner/releases" target="_blank">GPU挖矿</a></h4>
+                            <p>GPU挖矿软件.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-info">
+                            <div class="icons"><i class="ion-ios-color-filter-outline"></i></div>
+                            <h4><a href="https://github.com/XDagger/xdag" target="_blank">钱包源码</a></h4>
+                            <p>钱包源码可用于Linux, MacOS and Windows(Visual Studio 2017).</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section id="roadmap" class="roadmap">
+    <header class="section-header">
+        <h3>路线图</h3>
+    </header>
+    <ol class="roadmap-timeline js-roadmap-timeline wow">
+        <div class="roadmap-beginning"></div>
+        
+        
+        <li class="roadmap-timeframe js-roadmap-timeframe">
+            <div class="roadmap-date">2017年12月</div>
+            <svg class="roadmap-swirly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
+            
+                viewBox="-2 0 54 80"><path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"/><path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"
+            
+            /></svg>
+            <ul class="roadmap-events">
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>Windows和Linux的CLI</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>挖矿、全节点、矿池发布</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>测试网发布</li>   
+            
+            </ul>
+        </li>
+        
+        
+        <li class="roadmap-timeframe js-roadmap-timeframe">
+            <div class="roadmap-date">2018年1月</div>
+            <svg class="roadmap-swirly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
+            
+                viewBox="-932 501 54 80"><path d="M-879,503c0,0,0,6,0,19c0,33-49,38-49,59"/><path d="M-879,503c0,0,0,6,0,19c0,33-49,38-49,59"
+            
+            /></svg>
+            <ul class="roadmap-events">
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>主网上线</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>GUI钱包集成Windows挖矿程序</li>   
+            
+            </ul>
+        </li>
+        
+        
+        <li class="roadmap-timeframe js-roadmap-timeframe">
+            <div class="roadmap-date">2018年2月</div>
+            <svg class="roadmap-swirly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
+            
+                viewBox="-2 0 54 80"><path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"/><path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"
+            
+            /></svg>
+            <ul class="roadmap-events">
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>社区基于源代码建立了区块浏览器</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>原作者移交项目所有权给社区</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>Xdag.org 完全可以操作</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>整理源代码</li>   
+            
+            </ul>
+        </li>
+        
+        
+        <li class="roadmap-timeframe js-roadmap-timeframe">
+            <div class="roadmap-date">2018年3月</div>
+            <svg class="roadmap-swirly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
+            
+                viewBox="-932 501 54 80"><path d="M-879,503c0,0,0,6,0,19c0,33-49,38-49,59"/><path d="M-879,503c0,0,0,6,0,19c0,33-49,38-49,59"
+            
+            /></svg>
+            <ul class="roadmap-events">
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>XDAG 0.2.0版钱包发布</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>XDAG 0.2.1版钱包发布并增加支持MAC</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>使用新域名XDAG.IO并上线全新网站</li>   
+            
+            </ul>
+        </li>
+        
+        
+        <li class="roadmap-timeframe js-roadmap-timeframe">
+            <div class="roadmap-date">ETA 2018</div>
+            <svg class="roadmap-swirly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
+            
+                viewBox="-2 0 54 80"><path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"/><path d="m50,80c0,-21 -49,-26 -49,-59c0,-13 0,-19 -0,-19"
+            
+            /></svg>
+            <ul class="roadmap-events">
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>在完成RPC的开发之后，社区将推动交易所上市</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>Windows将集成Miner的GUI钱包</li>   
+            
+            </ul>
+        </li>
+        
+        
+        <li class="roadmap-timeframe js-roadmap-timeframe">
+            <div class="roadmap-date">未来计划</div>
+            <svg class="roadmap-swirly" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
+            
+                viewBox="-932 501 54 80"><path d="M-879,503c0,0,0,6,0,19c0,33-49,38-49,59"/><path d="M-879,503c0,0,0,6,0,19c0,33-49,38-49,59"
+            
+            /></svg>
+            <ul class="roadmap-events">
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>扩大开发团队的人数</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>社会媒体与市场营销</li>   
+            
+                <li class="roadmap-event"><div class="roadmap-vline"></div>托管服务</li>   
+            
+            </ul>
+        </li>
+        
+    </ol>
+</section>
+
+    <section id="community">
+        <div class="container">
+            <header class="section-header">
+                <h3>社区</h3>
+            </header>
+            <div class="row">
+                
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="0s" style="z-index:100">
+                    <div class="lftImg"><img src="/assets/images/community/qq1.png"></div>
+                    
+                    <div class="qqname">点击扫描二位码<br/>加群343071047</div>
+                    
+                    
+                    <div class="qrcode dn"><img src="/assets/images/community/WechatIMG85.png" ></div>
+                </div>
+                
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="0.1s" style="z-index:99">
+                    <div class="lftImg"><img src="/assets/images/community/qq2.png"></div>
+                    
+                    <div class="qqname">点击扫描二位码<br/>加群719082518</div>
+                    
+                    
+                    <div class="qrcode dn"><img src="/assets/images/community/WechatIMG72.png" ></div>
+                </div>
+                
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="0.2s" style="z-index:98">
+                    <div class="lftImg"><img src="/assets/images/community/qq.png"></div>
+                    
+                    <div class="qqname">点击扫描二位码<br/>加群618331380</div>
+                    
+                    
+                    <div class="qrcode dn"><img src="/assets/images/community/WechatIMG62.png" ></div>
+                </div>
+                
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="0.3s" style="z-index:97">
+                    <div class="lftImg"><img src="/assets/images/community/qq.png"></div>
+                    
+                    <div class="qqname">点击扫描二位码<br/>加群425879368</div>
+                    
+                    
+                    <div class="qrcode dn"><img src="/assets/images/community/WechatIMG77.png" ></div>
+                </div>
+                
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="0.4s" style="z-index:97">
+                    <div class="lftImg"><img src="/assets/images/community/qq.png"></div>
+                    
+                    <div class="qqname">点击扫描二位码<br/>加群60554756</div>
+                    
+                    
+                    <div class="qrcode dn"><img src="/assets/images/community/WechatIMG5.png" ></div>
+                </div>
+                
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="0.5s" style="z-index:96">
+                    <div class="lftImg"><img src="/assets/images/community/wx.png"></div>
+                    
+                    
+                    <div class="qqname">点击扫描二位码<br/>关注公众号</div>
+                    
+                    <div class="qrcode dn"><img src="/assets/images/community/wxgz.png" ></div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6 footer-info">
+                    <img src="/assets/images/logo.png" height="40" alt="" title="" />
+                    <div class="btm">
+                        <p>请支持我们的基金会: </p>
+                        <p class="btmWallet">捐赠 XDAG: FQglVQtb60vQv2DOWEUL7yh3smtj7g1s</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h4>有用的链接</h4>
+                    <ul>
+                        <li><a href="/index.html">首页</a></li>
+                        <li><a href="http://explorer.xdag.io/" target="_blank">浏览器</a></li>
+                        <li><a href="/index.html#services">挖矿入门</a></li>
+                        <li><a href="/index.html#wallet">钱包</a></li>
+                        <!--<li><a href="/blog/index.html">新闻</a></li>-->
+                        <li><a href="/assets/images/whitepaper.pdf" target="_blank">白皮书</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<script src="/assets/lib/jquery/jquery.min.js"></script>
+<script src="/assets/lib/jquery/jquery-migrate.min.js"></script>
+<script src="/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/lib/easing/easing.min.js"></script>
+<script src="/assets/lib/wow/wow.min.js"></script>
+<script src="/assets/js/superfish.custom.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/lib/waypoints/waypoints.min.js"></script>
+<script src="/assets/lib/lightbox/js/lightbox.min.js"></script>
+<script src="/assets/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+<script src="/assets/js/home.js"></script>
+</body>
+</html>

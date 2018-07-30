@@ -1,0 +1,17 @@
+- name: 下载钱包
+  content: 首先, 在下面先下载钱包.
+  pic: ion-ios-cloud-download-outline
+  index: 0
+  delay: 1.4s
+
+- name: 了解过程
+  content: 下一步观看易于学习的教学视频.
+  pic: ion-ios-videocam-outline
+  index: 1
+  delay: 1.5s
+
+- name: 选择一个矿池
+  content: 点击展开，可以使用以下列出的这些已认证的矿池.
+  pic: ion-ios-paper-outline
+  index: 2
+  delay: 1.6s

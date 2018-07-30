@@ -1,0 +1,156 @@
+{% include head.html %}
+    <link href="{{ 'assets/lib/lightbox/css/lightbox.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ 'assets/css/home.css' | relative_url }}" rel="stylesheet">
+</head>
+
+<body>
+{% include header.html %}
+<div class="mask"></div>
+<div class="playbrdr">
+    <div class="videoclose"><i class="ion-ios-close-outline" ></i></div>
+    <iframe src="" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+{% include bannerIndex.html %}
+<main id="main">
+    <section id="about">
+        <div class="container">
+            <header class="section-header">
+                <h3>{{ page.dag_title }}</h3>
+                <p>{{ page.dag_content }}</p>
+            </header>
+            <div class="row about-cols">
+                {% for d in site.data.dagger %}
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="{{d.delay}}">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="{{ d.pic | relative_url }}" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-unlocked-outline"></i></div>
+                        </div>
+                        <h2 class="title">{{ d.name }}</h2>
+                        <p>{{ d.content }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <header class="section-header wow fadeInUp">
+                <h3>{{ page.mine_title }}</h3>
+                <p>{{ page.mine_content }}</p>
+            </header>
+            <div class="row">
+                {% for d in site.data.mine %}
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="{{ d.delay }}">
+                    <div class="icon"><i class="{{ d.pic }}"></i></div>
+                    <h4 class="title">
+                        {% if d.index == 0 %}<a href="#wallet">{{ d.name }}</a>{% endif%}
+                        {% if d.index == 1 %}<a class="playvideo">{{ d.name }}</a>{% endif%}
+                        {% if d.index == 2 %}<a class="pool js-pool-info-toggle" data-toggle="collapse" data-target="#pool-info-wrapper" aria-expanded="false" aria-controls="pool-info-wrapper">{{ d.name }}</a>{% endif%}
+                    </h4>
+                    <p class="description">{{ d.content }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="collBg collapse" id="pool-info-wrapper">
+                <div class="row collTit">
+                    <div class="col span_12  left">
+                        <div>
+                            <p class="pStrong">费率介绍:</p>
+                            <hr />
+                            <p >例如: IP | (
+                                <span class="purple">1%<sup><span class="brdr"><span class="sup">1</span></span></sup></span> -
+                                <span class="black">1%<sup><span class="brdr"><span class="sup">2</span></span></sup></span> -
+                                <span class="dark">1%<sup><span class="brdr"><span class="sup">3</span></span></sup></span> -
+                                <span class="blue">1%<sup><span class="brdr"><span class="sup">4</span></span></sup></span>) | 矿池链接 | 矿池所在地 | 管理员</p>
+                            <hr />
+                            <ul class="row">
+                                <li class="col-lg-7 purple"><span class="brdrbtm"><span class="sup2">1</span> </span><span class="purple">1%</span> 矿池费率.</li>
+                                <li class="col-lg-5 black"><span class="brdrbtm"><span class="sup2">2</span></span><span class="black">1%</span>对于发现块的矿工的奖励</li>
+                                <li class="col-lg-7 dark"><span class="brdrbtm"><span class="sup2">3</span></span><span class="dark">1%</span>对直接贡献发现块的矿工奖励</li>
+                                <li class="col-lg-5 blue"><span class="brdrbtm"><span class="sup2">4</span></span><span class="blue">1%</span> 基金会社区费率.</li>
+                            </ul>
+                            <p class="collbtm">友情提示：在例子中的96%，将在矿池的所有矿工中分享。</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="row poollist">
+                    <div class="col span_12  left">
+                        <h5>以下所列出的所有矿池都对基金会有捐赠贡献：</h5>
+                        <div class="plist">
+                            {% for d in site.data.pool %}
+                            <p>
+                                <span class="ip">{{ d.ip }}</span>
+                                <span> | (</span><span class="purple">{{ d.fee_pool }}%</span><span>-</span><span class="black">{{ d.fee_miner_finder }}%</span><span>-</span><span class="dark">{{ d.fee_miner_contributor }}%</span><span>-</span><span class="blue">{{ d.fee_community }}%</span><span>) | </span>
+                                {% if d.web %}
+                                <a class="web" href="{{ d.web }}" target="_blank">{{ d.webName }}</a>
+                                <span> | </span>
+                                {% endif %} 
+                                <span class="country">{{ d.country }}</span>
+                                <span> | </span>
+                                <span class="name">{{ d.name }}</span>
+                                <span class="pool-state">
+                                 矿池状态: <span class="js-pool-state" data-url="{{ d.state }}"></span>
+                                </span>
+                            </p>
+                            {% endfor%}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="wallet"  class="section-bg" >
+        <div class="container">
+            <header class="section-header">
+                <h3 class="section-title">{{ page.wallet_title }}</h3>
+                <p>{{ page.wallet_content }}</p>
+            </header>
+            <div class="row justify-content-center portfolio-container">
+                {% for d in site.data.wallet %}
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="{{ d.delay }}">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-info">
+                            <div class="icons"><i class="{{ d.pic }}"></i></div>
+                            <h4><a href="{{d.href}}" target="_blank">{{ d.name }}</a></h4>
+                            <p>{{ d.content }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% include roadmap.html %}
+    <section id="community">
+        <div class="container">
+            <header class="section-header">
+                <h3>{{ page.community_title }}</h3>
+            </header>
+            <div class="row">
+                {% for d in site.data.community %}
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="{{ d.delay }}" style="z-index:{{ d.zindex }}">
+                    <div class="lftImg"><img src="{{ d.pic | relative_url }}"></div>
+                    {% if d.type == 'qq'%}
+                    <div class="qqname">点击扫描二位码<br/>加群{{ d.alt }}</div>
+                    {% endif %}
+                    {% if d.type == 'weixin'%}
+                    <div class="qqname">点击扫描二位码<br/>关注公众号</div>
+                    {% endif %}
+                    <div class="qrcode dn"><img src="{{ d.qrcode | relative_url }}" ></div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+</main>
+{% include footer.html %}
+<script src="{{ 'assets/lib/waypoints/waypoints.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/lib/lightbox/js/lightbox.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/lib/touchSwipe/jquery.touchSwipe.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/js/home.js' | relative_url }}"></script>
+</body>
+</html>

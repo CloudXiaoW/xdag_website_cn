@@ -1,0 +1,53 @@
+# Site configuration
+
+devNum: 28
+community_wallet: CqUd249QHSTvbHn9GXJjtwzM53R/Ca+i
+
+# Jekyll configuration
+
+baseurl: "/"
+
+paginate: 7
+paginate_path: "/blog/page:num"
+
+sass:
+  style: compressed
+
+## jekyll-seo-tag
+
+title: XDAG
+description: 基于DAG的全新数字加密货币
+logo: /assets/images/logo.png
+
+author:
+  name: Xdag.io
+  twitter: XDAG_Community
+  email: communitymanager@xdag.io 
+
+social:
+  links:
+    - https://t.me/dagger_cryptocurrency
+    - https://www.facebook.com/XDAG.Dagger.Community/
+    - https://twitter.com/XDAG_Community
+    - https://discord.gg/YxXUVQJ
+    - https://www.reddit.com/r/xdag/
+    - https://github.com/orgs/XDagger
+
+twitter:
+  card: summary
+  username: XDAG_Community
+
+facebook:
+  publisher: https://www.facebook.com/XDAG.Dagger.Community/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/default-card.png
+      
+## end jekyll-seo-tag
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
