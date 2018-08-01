@@ -7,7 +7,7 @@
   webName: http://www.xdagmine.com/
   state: http://www.xdagmine.com/state.txt
   country: 新加坡
-  name: Edward
+  name: 王博士
 
 - ip: cn.xdag.vspool.com:13654
   fee_pool: 1
@@ -39,6 +39,6 @@
   web: http://feipool.xyz/
   webName: http://feipool.xyz/
   state: http://feipool.xyz/state.txt
-  country: 加拿大
+  country: 法国
   name: 水哥
 
