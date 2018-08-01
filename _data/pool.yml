@@ -2,7 +2,7 @@
   fee_pool: 1
   fee_miner_finder: 1
   fee_miner_contributor: 1
-  fee_community: 1
+  fee_community: 2
   web: http://www.xdagmine.com
   webName: http://www.xdagmine.com/
   state: http://www.xdagmine.com/state.txt
@@ -13,7 +13,7 @@
   fee_pool: 1
   fee_miner_finder: 5
   fee_miner_contributor: 10
-  fee_community: 1
+  fee_community: 2
   web: https://www.vspool.com/xdag/
   webName: https://www.vspool.com/xdag/
   state: http://139.99.124.23/state.txt
@@ -24,7 +24,7 @@
   fee_pool: 1
   fee_miner_finder: 5
   fee_miner_contributor: 10
-  fee_community: 1
+  fee_community: 2
   web: http://xdagcn.com/
   webName: http://xdagcn.com/
   state: http://54.39.28.77/state.txt
@@ -35,10 +35,21 @@
   fee_pool: 1
   fee_miner_finder: 0
   fee_miner_contributor: 0
-  fee_community: 1
+  fee_community: 1.5
   web: http://feipool.xyz/
   webName: http://feipool.xyz/
   state: http://feipool.xyz/state.txt
   country: 法国
   name: 水哥
 
+
+- ip: vip.xdag.in:13654
+  fee_pool: 1
+  fee_miner_finder: 0
+  fee_miner_contributor: 0
+  fee_community: 2
+  web: http://xdagchain.wiki
+  webName: http://xdagchain.wiki
+  state: http://52.83.132.76:8889/state.txt
+  country: 中国
+  name: 胖子&wiki
