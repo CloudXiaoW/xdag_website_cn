@@ -16,6 +16,18 @@
   href: https://github.com/XDagger/xdag/files/2180609/xdag.0.2.5.zip
   delay: 0.2s
 
+- name: MacOS GPU挖矿
+  content: Jonano的GPU MacOS挖矿软件
+  pic: ion-logo-apple
+  href: https://github.com/jonano614/DaggerGpuMiner/files/2180530/GpuMiner.0.3.0.zip
+  delay: 0.4s
+
+- name: Android 钱包
+  content: 支持Android 5.0 以上.
+  pic: ion-logo-android
+  href: https://github.com/XDagger/android-wallet/releases/download/release_0.2.1/android_wallet_release_v0.2.1.apk
+  delay: 0.5s
+
 - name: GPU挖矿
   content: GPU挖矿软件.
   pic: ion-social-windows
