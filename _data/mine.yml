@@ -11,7 +11,7 @@
   delay: 1.5s
 
 - name: 选择一个矿池
-  content: 点击展开，可以使用以下列出的这些已认证的矿池.
+  content: 可以安心使用以下列出的这些已认证的矿池.
   pic: ion-ios-paper-outline
   index: 2
   delay: 1.6s
