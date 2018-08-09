@@ -1,5 +1,6 @@
 {% include head.html %}
     <link href="{{ 'assets/lib/lightbox/css/lightbox.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/owlcarousel/assets/owl.carousel.min.css' | relative_url }}" rel="stylesheet">
     <link href="{{ 'assets/css/home.css' | relative_url }}" rel="stylesheet">
 </head>
 
@@ -123,6 +124,29 @@
             </div>
         </div>
     </section>
+
+
+    <section id="testimonials" class="wow fadeInUp" >
+        <div class="container">
+            <header class="section-header">
+                <h3>推荐交易所</h3>
+            </header>
+            <div class="owl-carousel testimonials-carousel">
+                <div class="testimonial-item">
+                    <img src="{{'assets/images/1.jpg' | relative_url }}" class="testimonial-img" alt="">
+                    <a href="https://www.coinbat.com" target="_blank"><h3>www.coinbat.com</h3></a>
+                    <h4>币飞</h4>
+                    <p>
+                        <img src="http://www.o2o8.cn/img/quote-sign-left.png" class="quote-sign-left" alt="">
+                        Coinbat.com是一家设立在新加坡的一家有国际雄厚资本的交易平台。Xdag作为dag中的bitcoin已经率先登陆。用币飞，币会飞。Coinbat.com立志成为只上好币的加密货币的灯塔。
+                        <img src="http://www.o2o8.cn/img/quote-sign-right.png" class="quote-sign-right" alt="">
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     {% include roadmap.html %}
     <section id="community">
         <div class="container">
@@ -151,6 +175,7 @@
 <script src="{{ 'assets/lib/waypoints/waypoints.min.js' | relative_url }}"></script>
 <script src="{{ 'assets/lib/lightbox/js/lightbox.min.js' | relative_url }}"></script>
 <script src="{{ 'assets/lib/touchSwipe/jquery.touchSwipe.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/lib/owlcarousel/owl.carousel.min.js' | relative_url }}"></script>
 <script src="{{ 'assets/js/home.js' | relative_url }}"></script>
 </body>
 </html>

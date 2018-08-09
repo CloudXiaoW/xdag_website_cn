@@ -1,8 +1,11 @@
 jQuery(document).ready(function( $ ) {
 
-  /**
-   * Video overlay
-   */
+	$(".testimonials-carousel").owlCarousel({
+	  autoplay: true,
+	  dots: true,
+	  loop: true,
+	  items: 1
+	});
 
   $('.playvideo').click(function () {
     $(".mask").show();
