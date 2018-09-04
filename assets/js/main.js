@@ -147,7 +147,7 @@ throttle("resize", "optimizedResize");
 
 var nav = (function() {
   // $nav-breakpoint in main.scss
-  var navBreakpoint = '1050px';
+  var navBreakpoint = '1300px';
   var navToggle = document.querySelector('.js-nav-main-toggle');
   var noSubItems = document.querySelectorAll('.js-nav-no-sublevel');
   var subItems = document.querySelectorAll('.js-nav-has-sublevel');
@@ -274,14 +274,14 @@ if (document.documentMode || /Edge/.test(navigator.userAgent)) {
   }
 
   function handleScroll(e) {
-    var scrollTarget = document.querySelector(e.target.hash);
+    var $scrollTarget = $(e.target.hash);
     var headerHeight = header.classList.contains('header-scrolled') ? header.offsetHeight : header.offsetHeight - 20;
 
     navToggle.checked = false;
     document.body.classList.remove('nav-overlay-active');
     nav.$el.superfish('hide');
     $('html, body').animate({
-      scrollTop: scrollTarget.offsetTop - headerHeight
+      scrollTop: $scrollTarget.offset().top - headerHeight
     }, 1500, 'easeInOutExpo');
   }
 
@@ -303,3 +303,18 @@ if (document.documentMode || /Edge/.test(navigator.userAgent)) {
            location.hostname === link.hostname;
   }
 })();
+
+/*
+ * Array Shuffle method
+ */
+
+Array.prototype.shuffle = function() {
+  const input = this;
+  for (let i = input.length-1; i >=0; i--) {
+    const randomIndex = Math.floor(Math.random()*(i+1));
+    let itemAtIndex = input[randomIndex];
+    input[randomIndex] = input[i];
+    input[i] = itemAtIndex;
+  }
+  return input;
+};

@@ -1,4 +1,6 @@
+@import "helpers/variables";
 @import "helpers/mixins";
+@import "components/button";
 
 /*--------------------------------------------------------------
 # General
@@ -19,7 +21,7 @@ body {
 }
 
 a {
-  color: #428bca;
+  color: $color-primary;
   transition: color 0.5s;
 }
 
@@ -44,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Back to top button */
 .back-to-top {
   position: fixed;
-  background: #428bca;
+  background: $color-primary;
   color: #fff;
   display: inline-block;
   width: 44px;
@@ -64,16 +66,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-// Utility classes
-
-.display-toggle {
-  display: none;
-
-  &:not(:checked) ~ .display-toggle-target {
-    display: none;
-  }
-}
-
 .chs {
   text-indent: -9999px;
   height: 0;
@@ -89,6 +81,25 @@ h1, h2, h3, h4, h5, h6 {
 .bg-black {
   background: #111;
 }
+
+.lang-warn {
+  font-size: 11px;
+  position: relative;
+  top: -5px;
+  margin-left: 5px;
+  color: #bdbdbd;
+}
+
+// Utility classes
+
+.display-toggle {
+  display: none;
+
+  &:not(:checked) ~ .display-toggle-target {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -96,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 $header-height: 92px;
 $header-height-scrolled: 72px;
 $header-bg-scrolled: rgba(0, 0, 0, 0.7);
+$header-bp: 1400px;
 
 #header {
   display: flex;
@@ -110,7 +122,7 @@ $header-bg-scrolled: rgba(0, 0, 0, 0.7);
   background: 0;
   transition: height 0.5s, background 0.5s;
 
-  @media (min-width: 1050px) {
+  @include bp-min($header-bp) {
     padding: 30px 60px;
   }
 
@@ -125,7 +137,7 @@ $header-bg-scrolled: rgba(0, 0, 0, 0.7);
   padding: 20px 15px;
   height: $header-height-scrolled;
 
-  @media (min-width: 1050px) {
+  @include bp-min($header-bp) {
     padding: 20px 60px;
   }
 }
@@ -149,12 +161,13 @@ $header-bg-scrolled: rgba(0, 0, 0, 0.7);
   background: #000 url("../images/banner/1.jpg") center;
 }
 
+
 /*--------------------------------------------------------------
 # Main navigation
 --------------------------------------------------------------*/
 
 // navBreakpoint in main.js 
-$nav-breakpoint: 1050px;
+$nav-breakpoint: 1300px;
 
 .nav-overlay-active {
   @include bp-max($nav-breakpoint) {
@@ -177,7 +190,7 @@ $nav-breakpoint: 1050px;
   }
 
   @at-root .is-focusable &:focus {
-    color: #428bca;
+    color: $color-primary;
   }
 
   &::before {
@@ -239,12 +252,12 @@ $nav-breakpoint: 1050px;
 
     &:hover {
       @include bp-min($nav-breakpoint) {
-        color: #428bca;
+        color: $color-primary;
       }
     }
 
     @at-root .is-focusable &:focus {
-      color: #428bca;
+      color: $color-primary;
     }
   }
 
@@ -253,6 +266,20 @@ $nav-breakpoint: 1050px;
     transition: color 0.5s;
     cursor: pointer;
     user-select: none;
+
+    &.nav-sublevel-label--lang {
+      padding-left: 40px;
+      font-size: 11px;
+      line-height: 16px;
+
+      @include bp-max($nav-breakpoint) {
+        margin-top: 20px;
+      }
+
+      @include bp-min($nav-breakpoint) {
+        padding-left: 20px;
+      }
+    }
   }
 
   ul {
@@ -265,6 +292,77 @@ $nav-breakpoint: 1050px;
 
     &:hover {
       z-index: 1;
+    }
+  }
+}
+
+.nav-lang {
+  margin-top: 20px;
+
+  @include bp-min($nav-breakpoint) {
+    margin-top: 0;
+    margin-left: 100px !important; 
+  }
+
+  .nav-sublevel-icon {
+    font-size: 24px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fbfdff;
+
+    @include bp-min($nav-breakpoint) {
+      left: 0;
+    }
+  }
+
+  .nav-sublevel-text {
+    font-size: 11px;
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    margin-left: 30px;
+
+    @include bp-min($nav-breakpoint) {
+      margin-left: 16px;
+    }
+  }
+
+  .nav-sublevel {
+    left: auto;
+    right: 0;
+    min-width: 0;
+  }
+
+  .nav-sublevel-grid {
+    @include bp-min($nav-breakpoint) {
+      white-space: nowrap;
+      overflow-y: auto;
+      max-height: calc(100vh - 100px);
+      padding: 10px 0;
+
+      @supports (display: grid) {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(4, min-content);
+        grid-auto-columns: min-content;
+        direction: rtl;
+        text-align: left;
+        width: min-content;
+        overflow-y: initial;
+      }
+    }
+
+    li {
+      @include bp-min($nav-breakpoint) {
+        margin: 0 10px !important; 
+      }
+    }
+
+    a {
+      font-size: 11px;
+      text-transform: uppercase;
     }
   }
 }
@@ -296,7 +394,7 @@ $nav-breakpoint: 1050px;
     top: calc(100% + 15px);
     left: 0;
     min-width: 180px;
-    box-shadow: inset 0 2px #428bca;
+    box-shadow: inset 0 2px $color-primary;
     background: $header-bg-scrolled;
   }
 
@@ -305,7 +403,7 @@ $nav-breakpoint: 1050px;
     opacity: 1;
   }
 
-  > li {
+  li {
     @include bp-min($nav-breakpoint) {
       margin: 0 10px;
     }
@@ -354,20 +452,20 @@ $nav-breakpoint: 1050px;
   @at-root .nav-main .is-active &::after {
     // chevron-up
     content: "\f077";
-    color: #428bca;
+    color: $color-primary;
   }
 
   @at-root .no-js .display-toggle:checked ~ &::after {
     // chevron-up
     content: "\f077";
-    color: #428bca;
+    color: $color-primary;
   }
 
 
   &.is-active::after {
     // chevron-up
     content: "\f077";
-    color: #428bca;
+    color: $color-primary;
   }
 }
 
@@ -392,6 +490,7 @@ $nav-breakpoint: 1050px;
     display: block;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Sections
@@ -425,7 +524,7 @@ $nav-breakpoint: 1050px;
   display: block;
   width: 40px;
   height: 3px;
-  background: #428bca;
+  background: $color-primary;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -460,6 +559,9 @@ $nav-breakpoint: 1050px;
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+  img{
+    margin-bottom: 30px;
+  }
 }
 
 #footer .footer-top .footer-info h3 {
@@ -497,8 +599,13 @@ $nav-breakpoint: 1050px;
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #428bca;
+  background: $color-primary;
   color: #fff;
+}
+.btmWallet {
+  font-size: 16px!important;
+  font-weight: bold!important;
+  color: #25dde0!important;
 }
 
 #footer .footer-top h4 {
@@ -524,7 +631,7 @@ $nav-breakpoint: 1050px;
 }
 
 #footer .footer-top h4::after {
-  background: #428bca;
+  background: $color-primary;
   width: 60px;
 }
 
@@ -557,7 +664,7 @@ $nav-breakpoint: 1050px;
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #428bca;
+  color: $color-primary;
 }
 
 #footer .footer-top .footer-contact {
@@ -579,7 +686,7 @@ $nav-breakpoint: 1050px;
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #428bca;
+  background: $color-primary;
   border: 0;
   width: 35%;
   padding: 6px 0;
@@ -604,15 +711,71 @@ $nav-breakpoint: 1050px;
   color: #ddd;
 }
 
-.btm {
-  padding-top:40px;
+.community_wallets {
+  padding: 40px 0;
 }
 
-.btmWallet {
-  font-size: 16px!important;
-  font-weight: bold!important;
-  color: #25dde0!important;
+.community_wallets__item {
+  display: inline-block;
+  margin: 3px 0;
+
+  &:hover {
+    .community_wallets__arrow {
+
+      &:nth-of-type(1) {
+        transform: translateX(-2px);
+      }
+
+      &:nth-of-type(2) {
+        transform: translateX(2px);
+      }
+    }
+  }
 }
+
+@keyframes community_wallets__color {
+  0% {
+    color: #588ee9;
+  } 
+  50% {
+    color: #2ad4de;
+  }
+  100% {
+    color: #588ee9;
+  }
+}
+
+.community_wallets__currency {
+  display: inline-block;
+  width: 3.5em;
+  user-select: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.community_wallets__arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  user-select: none;
+  animation: community_wallets__color 10s ease infinite;
+
+  &--i2 {
+    animation-delay: -3.666s 
+  }
+
+  &--i3 {
+    animation-delay: -6.333s 
+  }
+
+  &:last-of-type {
+    margin-right: 1em;
+  }
+}
+
+.community_wallets__address {
+  word-break: break-word;
+}
+
 .mask {
   display: none;
   position:fixed;
@@ -633,15 +796,11 @@ $nav-breakpoint: 1050px;
 }
 
 .videoclose {
+  font-size: 30px;
   color: #fff;
   position: fixed;
   top: 10px;
   right: 10px;
   cursor: pointer;
   z-index: 999;
-}
-
-.ion-ios-close-outline {
-  font-size:30px;
-  font-weight: bold;
 }

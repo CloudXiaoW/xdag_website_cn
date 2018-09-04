@@ -1,122 +1,78 @@
 {% include head.html %}
-    <link href="{{ 'assets/lib/lightbox/css/lightbox.min.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ 'assets/lib/owlcarousel/assets/owl.carousel.min.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ 'assets/css/home.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/lib/owlcarousel/assets/owl.carousel.min.css' | absolute_url }}" rel="stylesheet">
+    <link href="{{ '/assets/lib/lightbox/css/lightbox.min.css' | absolute_url }}" rel="stylesheet">
+    <link href="{{ '/assets/css/home.css' | absolute_url }}" rel="stylesheet">
 </head>
 
 <body>
 {% include header.html %}
 <div class="mask"></div>
 <div class="playbrdr">
-    <div class="videoclose"><i class="ion-ios-close-outline" ></i></div>
+    <div class="videoclose"><i class="ion-ios-close-circle-outline"></i></div>
     <iframe src="" frameborder="0" width="100%" height="100%"></iframe>
 </div>
-{% include bannerIndex.html %}
+{% include banner.html %}
 <main id="main">
     <section id="about">
         <div class="container">
             <header class="section-header">
-                <h3>{{ page.dag_title }}</h3>
-                <p>{{ page.dag_content }}</p>
+                <h3>{% t home.introduction %}</h3>
+                <p>{% t home.introduction_content %}</p>
             </header>
             <div class="row about-cols">
-                {% for d in site.data.dagger %}
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="{{d.delay}}">
+                {% for feature in site.translations[site.lang].home.features %}
+                {% assign feature_d = site.data.features[forloop.index0] %}
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="{{ feature_d.delay }}">
                     <div class="about-col">
                         <div class="img">
-                            <img src="{{ d.pic | relative_url }}" alt="" class="img-fluid">
-                            <div class="icon"><i class="ion-ios-unlocked-outline"></i></div>
+                            <img src="{{ feature_d.img | absolute_url }}" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-unlock"></i></div>
                         </div>
-                        <h2 class="title">{{ d.name }}</h2>
-                        <p>{{ d.content }}</p>
+                        <h2 class="title">{{ feature.title }}</h2>
+                        <p>{{ feature.content }}</p>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </section>
-    <section id="services">
+    <section class="mining" id="mining">
         <div class="container">
             <header class="section-header wow fadeInUp">
-                <h3>{{ page.mine_title }}</h3>
-                <p>{{ page.mine_content }}</p>
+                <h3>{% t home.mining %}</h3>
+                <p>{% t home.mining_content %}</p>
             </header>
             <div class="row">
-                {% for d in site.data.mine %}
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="{{ d.delay }}">
-                    <div class="icon"><i class="{{ d.pic }}"></i></div>
+                {% for guide in site.translations[site.lang].home.mining_guides %}
+                {% assign guide_d = site.data.mining-guides[forloop.index0] %}
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="{{ guide_d.delay }}">
+                    <div class="icon"><i class="{{ guide_d.icon }}"></i></div>
                     <h4 class="title">
-                        {% if d.index == 0 %}<a href="#wallet">{{ d.name }}</a>{% endif%}
-                        {% if d.index == 1 %}<a class="playvideo">{{ d.name }}</a>{% endif%}
-                        {% if d.index == 2 %}<a class="pool js-pool-info-toggle" data-toggle="collapse" data-target="#pool-info-wrapper" aria-expanded="false" aria-controls="pool-info-wrapper">{{ d.name }}</a>{% endif%}
+                        {% if forloop.index0 == 0 %}<a href="#{% t nav.wallet %}">{{ guide.title }}</a>{% endif %}
+                        {% if forloop.index0 == 1 %}<a class="playvideo">{{ guide.title }}</a>{% endif %}
+                        {% if forloop.index0 == 2 %}<a href="{% tl pools %}" class="pool">{{ guide.title }}</a>{% endif %}
                     </h4>
-                    <p class="description">{{ d.content }}</p>
+                    <p class="description">{{ guide.content }}</p>
                 </div>
                 {% endfor %}
             </div>
-            <div class="collBg collapse show" id="pool-info-wrapper">
-                <div class="row collTit">
-                    <div class="col span_12  left">
-                        <div>
-                            <p class="pStrong">费率介绍:</p>
-                            <hr />
-                            <p >例如: IP | (
-                                <span class="purple">1%<sup><span class="brdr"><span class="sup">1</span></span></sup></span> -
-                                <span class="black">1%<sup><span class="brdr"><span class="sup">2</span></span></sup></span> -
-                                <span class="dark">1%<sup><span class="brdr"><span class="sup">3</span></span></sup></span> -
-                                <span class="blue">1%<sup><span class="brdr"><span class="sup">4</span></span></sup></span>) | 矿池链接 | 矿池所在地 | 管理员</p>
-                            <hr />
-                            <ul class="row">
-                                <li class="col-lg-7 purple"><span class="brdrbtm"><span class="sup2">1</span> </span><span class="purple">1%</span> 矿池费率.</li>
-                                <li class="col-lg-5 black"><span class="brdrbtm"><span class="sup2">2</span></span><span class="black">1%</span>对于发现块的矿工的奖励</li>
-                                <li class="col-lg-7 dark"><span class="brdrbtm"><span class="sup2">3</span></span><span class="dark">1%</span>对直接贡献发现块的矿工奖励</li>
-                                <li class="col-lg-5 blue"><span class="brdrbtm"><span class="sup2">4</span></span><span class="blue">1%</span> 基金会社区费率.</li>
-                            </ul>
-                            <p class="collbtm">友情提示：在例子中的96%，将在矿池的所有矿工中分享。</p>
-                            </div>
-                    </div>
-                </div>
-                <div class="row poollist">
-                    <div class="col span_12 left">
-                        <h5>以下所列出的所有矿池都对基金会有捐赠贡献：</h5>
-                        <div class="plist">
-                            {% for d in site.data.pool %}
-                            <p>
-                                <span class="ip">{{ d.ip }}</span>
-                                <span> | (</span><span class="purple">{{ d.fee_pool }}%</span><span>-</span><span class="black">{{ d.fee_miner_finder }}%</span><span>-</span><span class="dark">{{ d.fee_miner_contributor }}%</span><span>-</span><span class="blue">{{ d.fee_community }}%</span><span>) | </span>
-                                {% if d.web %}
-                                <a class="web" href="{{ d.web }}" target="_blank">{{ d.webName }}</a>
-                                <span> | </span>
-                                {% endif %} 
-                                <span class="country">{{ d.country }}</span>
-                                <span> | </span>
-                                <span class="name">{{ d.name }}</span>
-                                <span class="pool-state">
-                                 矿池状态: <span class="js-pool-state" data-url="{{ d.state }}"></span>
-                                </span>
-                            </p>
-                            {% endfor%}
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-    <section id="wallet"  class="section-bg" >
+    <section id="wallet" class="wallets section-bg" >
         <div class="container">
             <header class="section-header">
-                <h3 class="section-title">{{ page.wallet_title }}</h3>
-                <p>{{ page.wallet_content }}</p>
+                <h3 class="section-title">{% t home.software %}</h3>
+                <p>{% t home.software_content %}</p>
             </header>
             <div class="row justify-content-center portfolio-container">
-                {% for d in site.data.wallet %}
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="{{ d.delay }}">
+                {% for software in site.translations[site.lang].home.software_links %}
+                {% assign software_d = site.data.software[forloop.index0] %}
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="{{ software_d.delay }}">
                     <div class="portfolio-wrap">
                         <div class="portfolio-info">
-                            <div class="icons"><i class="{{ d.pic }}"></i></div>
-                            <h4><a href="{{d.href}}" target="_blank">{{ d.name }}</a></h4>
-                            <p>{{ d.content }}</p>
+                            <div class="icons"><i class="{{ software_d.icon }}"></i></div>
+                            <h4><a href="{{ software_d.href }}" target="_blank">{{ software.title }}</a></h4>
+                            <p>{{ software.content }}</p>
                         </div>
                     </div>
                 </div>
@@ -124,34 +80,12 @@
             </div>
         </div>
     </section>
-
-
-    <section id="testimonials" class="wow fadeInUp" >
-        <div class="container">
-            <header class="section-header">
-                <h3>推荐交易所</h3>
-            </header>
-            <div class="owl-carousel testimonials-carousel">
-                <div class="testimonial-item">
-                    <img src="{{'assets/images/1.jpg' | relative_url }}" class="testimonial-img" alt="">
-                    <a href="https://www.coinbat.com" target="_blank"><h3>www.coinbat.com</h3></a>
-                    <h4>币飞</h4>
-                    <p>
-                        <img src="http://www.o2o8.cn/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                        Coinbat.com是一家设立在新加坡的一家有国际雄厚资本的交易平台。Xdag作为dag中的bitcoin已经率先登陆。用币飞，币会飞。Coinbat.com立志成为只上好币的加密货币的灯塔。
-                        <img src="http://www.o2o8.cn/img/quote-sign-right.png" class="quote-sign-right" alt="">
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
+    {% include exchanges.html %}
     {% include roadmap.html %}
     <section id="community">
         <div class="container">
             <header class="section-header">
-                <h3>{{ page.community_title }}</h3>
+                <h3>{% t home.community %}</h3>
             </header>
             <div class="row">
                 {% for d in site.data.community %}
@@ -172,10 +106,10 @@
     </section>
 </main>
 {% include footer.html %}
-<script src="{{ 'assets/lib/waypoints/waypoints.min.js' | relative_url }}"></script>
-<script src="{{ 'assets/lib/lightbox/js/lightbox.min.js' | relative_url }}"></script>
-<script src="{{ 'assets/lib/touchSwipe/jquery.touchSwipe.min.js' | relative_url }}"></script>
-<script src="{{ 'assets/lib/owlcarousel/owl.carousel.min.js' | relative_url }}"></script>
-<script src="{{ 'assets/js/home.js' | relative_url }}"></script>
+<script src="{{ '/assets/lib/waypoints/waypoints.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/lib/owlcarousel/owl.carousel.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/lib/lightbox/js/lightbox.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/lib/touchSwipe/jquery.touchSwipe.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/home.js' | absolute_url }}"></script>
 </body>
 </html>
