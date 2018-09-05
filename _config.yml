@@ -6,7 +6,7 @@ devNum: 28
 # Jekyll configuration
 
 
-url: https://xdag.top
+url: xdag.top
 baseurl: ""
 
 #paginate: 7
