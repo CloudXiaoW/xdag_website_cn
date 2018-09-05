@@ -37,4 +37,4 @@ author:
 ## Translations
 
 languages: ["zh", "en", "se", "es", "fr", "cs"]
-exclude_from_localizations: ["assets", "blog", "CNAME", "README.md", "feed.xml", "_posts"]
+exclude_from_localizations: ["assets", "blog", "CNAME", "README.md", "_posts"]
