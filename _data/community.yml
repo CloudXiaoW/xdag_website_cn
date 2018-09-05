@@ -1,40 +1,23 @@
-- pic: assets/images/community/qq1.png
-  alt: 343071047
-  qrcode: assets/images/community/WechatIMG85.png
-  delay: 0s
-  zindex: 100
-  type: qq
+- pic: /assets/images/community/discord.jpg
+  href: https://discord.gg/YxXUVQJ
+  alt: discord
 
-- pic: assets/images/community/qq2.png
-  alt: 719082518
-  qrcode: assets/images/community/WechatIMG72.png
-  delay: 0.1s
-  zindex: 99
-  type: qq
+- pic: /assets/images/community/rd.jpg
+  href: https://www.reddit.com/r/xdag/
+  alt: reddit
 
-- pic: assets/images/community/qq.png
-  alt: 618331380
-  qrcode: assets/images/community/WechatIMG62.png
-  delay: 0.2s
-  zindex: 98
-  type: qq
+- pic: /assets/images/community/github.jpg
+  href: https://github.com/orgs/XDagger
+  alt: github
 
-- pic: assets/images/community/qq.png
-  alt: 425879368
-  qrcode: assets/images/community/WechatIMG77.png
-  delay: 0.3s
-  zindex: 97
-  type: qq
+- pic: /assets/images/community/telegram.jpg
+  href: https://t.me/dagger_cryptocurrency
+  alt: telegram
 
-- pic: assets/images/community/qq.png
-  alt: 60554756
-  qrcode: assets/images/community/WechatIMG5.png
-  delay: 0.4s
-  zindex: 97
-  type: qq
+- pic: /assets/images/community/fb.jpg
+  href: https://www.facebook.com/XDAG.Dagger.Community/
+  alt: facebook
 
-- pic: assets/images/community/wx.png
-  qrcode: assets/images/community/wxgz.png
-  delay: 0.5s
-  zindex: 96
-  type: weixin
+- pic: /assets/images/community/twt.jpg
+  href: https://twitter.com/XDAG_Community
+  alt: twitter

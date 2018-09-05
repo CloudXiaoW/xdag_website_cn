@@ -559,9 +559,6 @@ $nav-breakpoint: 1300px;
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
-  img{
-    margin-bottom: 30px;
-  }
 }
 
 #footer .footer-top .footer-info h3 {
@@ -572,7 +569,7 @@ $nav-breakpoint: 1300px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
-  border-left: 4px solid #428bca;
+  border-left: 4px solid $color-primary;
 }
 
 #footer .footer-top .footer-info p {
@@ -601,11 +598,6 @@ $nav-breakpoint: 1300px;
 #footer .footer-top .social-links a:hover {
   background: $color-primary;
   color: #fff;
-}
-.btmWallet {
-  font-size: 16px!important;
-  font-weight: bold!important;
-  color: #25dde0!important;
 }
 
 #footer .footer-top h4 {

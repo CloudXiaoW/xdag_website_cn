@@ -60,7 +60,5 @@ facebook:
       
 ## Translations
 
-languages: ["zh", "en", "se", "es", "fr", "cs"]
+languages: ["en", "zh", "se", "es", "fr", "cs"]
 exclude_from_localizations: ["assets", "blog", "CNAME", "README.md", "feed.xml", "_posts"]
-
-community_wallet: bFi6yqUCnDvP2hBSUcHCmfBgJB2Jew6f

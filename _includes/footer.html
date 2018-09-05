@@ -3,21 +3,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-6 footer-info">
-                    <img src="{{ '/assets/images/logo.png' | relative_url }}" height="40" alt="" title="" />
-                    <div class="btm">
-                        <p>请支持我们的基金会: </p>
-                        <p class="btmWallet">捐赠 XDAG: {{ site.community_wallet }}</p>
+                    <img src="{{ '/assets/images/logo.svg' | absolute_url }}" height="60" alt="Dagger, by the community" />
+                    <div class="community_wallets">
+                        <p class="mb-3">{% t footer.support %}</p>
+                        {% for wallet in site.community_wallets %}
+                        <div>
+                          <p class="community_wallets__item community_wallets__item">
+                            <span class="community_wallets__currency">{{ wallet.currency }}</span>
+                            <i class=" community_wallets__arrow community_wallets__arrow--i{{ forloop.index }} ion-ios-arrow-back"></i>
+                            <i class=" community_wallets__arrow community_wallets__arrow--i{{ forloop.index }} ion-ios-arrow-forward"></i>
+                            <span class="community_wallets__address">{{ wallet.address }}</span>
+                          </p>  
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 footer-links">
                     <h4>{% t footer.links %}</h4>
                     <ul>
                         <li><a href="{% tl home %}">{% t nav.home %}</a></li>
-                        <li><a href="http://xdagscan.com/" target="_blank">浏览器</a></li>
+                        <li><a href="http://explorer.xdag.io/" target="_blank">{% t nav.explorer %}{% include lang-warn.html %}</a></li>
                         <li><a href="{% tl home %}#{% t nav.mining %}">{% t nav.mining %}</a></li>
                         <li><a href="{% tl home %}#{% t nav.wallet %}">{% t nav.wallet %}</a></li>
-                        <!--<li><a href="{{ '/blog' | absolute_url }}">{% t nav.news %}{% include lang-warn.html %}</a></li>-->
-                        <li><a href="http://xdag.top/assets/images/whitepaper.pdf" target="_blank">白皮书</a></li>
+                        <li><a href="{{ '/blog' | absolute_url }}">{% t nav.news %}{% include lang-warn.html %}</a></li>
+                        <li><a href="https://github.com/XDagger/xdag/blob/master/WhitePaper.md" target="_blank">{% t nav.whitepaper %}{% include lang-warn.html %}</a></li>
                     </ul>
                 </div>
             </div>

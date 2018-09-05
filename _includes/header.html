@@ -21,20 +21,20 @@
                 </ul>
             </li>
             <li class="js-nav-no-sublevel">
-                <a href="http://xdagscan.com" target="_blank">浏览器</a>
+                <a href="http://explorer.xdag.io/" target="_blank">{% t nav.explorer %}{% include lang-warn.html %}</a>
             </li>
             <li class="js-nav-has-sublevel">
                 <input class="display-toggle" type="checkbox" id="nav-resources-toggle">
                 <label class="nav-sublevel-label js-nav-sublevel-label" for="nav-resources-toggle" tabindex="0">{% t nav.resources %}</label>
                 <ul id="nav-resources" class="nav-sublevel js-nav-sublevel">
-                    <li><a href="http://xdag.top/assets/images/whitepaper.pdf" target="_blank">白皮书</a></li>
+                    <li><a href="https://github.com/XDagger/xdag/blob/master/WhitePaper.md" target="_blank">{% t nav.whitepaper %}{% include lang-warn.html %}</a></li>
                     <li><a href="https://github.com/XDagger/xdag/releases" target="_blank">{% t nav.releases %}{% include lang-warn.html %}</a></li>
                     <li><a href="{% tl home %}#roadmap">{% t nav.roadmap %}</a></li>
                 </ul>
             </li>
-            <!--<li class="js-nav-no-sublevel">-->
-                <!--<a href="{{ '/blog' | absolute_url }}">{% t nav.news %}{% include lang-warn.html %}</a>-->
-            <!--</li>-->
+            <li class="js-nav-no-sublevel">
+                <a href="{{ '/blog' | absolute_url }}">{% t nav.news %}{% include lang-warn.html %}</a>
+            </li>
             <li class="js-nav-has-sublevel">
                 <input class="display-toggle" type="checkbox" id="nav-community-toggle">
                 <label class="nav-sublevel-label js-nav-sublevel-label" for="nav-community-toggle" tabindex="0">{% t nav.community %}</label>
@@ -49,28 +49,22 @@
                 </label>
                 <div id="nav-lang" class="sf-mega nav-sublevel js-nav-sublevel">
                   <ul class="nav-sublevel-grid">
-
+<!--
+                    <li>
+                      <a href="https://xdag.top">中文</a>
+                    </li>
+-->
                     {%- for lang in site.languages -%}
-
-                      <!--{% capture language %}{{ site.translations[lang].nav.current_language }}{% endcapture %}-->
-                      {% if page.translated %}
-                        <!--{% capture namespace %}{{ page.namespace }} {{ lang }}{% endcapture %}-->
-                        <!--<a href="{{ site.url }}{% tl namespace %}">{{ language }}</a>-->
                       <li>
-                          {% if lang == 'en' %}
-                          <a href="https://xdag.io">EN</a>
-                          {%else%}
-                          {% if lang!= 'zh' %}
-                          <a href="https://xdag.io/{{lang }} ">{{ language }}</a>
-                          {% else %}
-                          <a href="https://xdag.top">中文</a>
-                          {%- endif -%}
-                          {%- endif -%}
-
-
-                      </li>
+                      {% capture language %}{{ site.translations[lang].nav.current_language }}{% endcapture %}
+                      {% if page.translated %}
+                        {% capture namespace %}{{ page.namespace }} {{ lang }}{% endcapture %}
+                        <a href="{{ site.url }}{% tl namespace %}">{{ language }}</a>
+                      {%- else -%}
+                        <a href="{% localize_absolute_url {{ '/index.html' }} {{ lang }} %}">{{ language }}</a>
                       {%- endif -%}
-                    {%- endfor -%}
+                      </li>
+                    {%- endfor -%} 
                   </ul>
                 </div>
             </li>

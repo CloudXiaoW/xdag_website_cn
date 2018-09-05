@@ -52,7 +52,7 @@
     {%- if page.translated -%}
     {%- for lang in site.languages -%}
       {% capture namespace %}{{page.namespace}} {{ lang }}{% endcapture %}
-      {% capture alternate_hreflang %}{% if lang == 'zh' %}x-default{% else %}{{ lang }}{% endif %}{% endcapture %}
+      {% capture alternate_hreflang %}{% if lang == 'en' %}x-default{% else %}{{ lang }}{% endif %}{% endcapture %}
       {% capture alternate_href %}{{ site.url }}{% tl {{ namespace }} %}{% endcapture %}
       <link rel="alternate" hreflang="{{ alternate_hreflang }}" href="{{ alternate_href }}">
     {%- endfor -%} 

@@ -16,9 +16,7 @@ jQuery(document).ready(function( $ ) {
     var iframeUrl=$("iframe").attr("src");
     $("iframe").attr("src","https://www.youtube.com/embed/mUlEVP2MjgQ?rel=0&amp;showinfo=0")
   });
-	$(".imgbrdr").hover(function () {
-		$(this).find(".qrcode").toggleClass("dn");
-	});
+
   /**
    * Banner
    */
@@ -156,8 +154,7 @@ jQuery(document).ready(function( $ ) {
 
   var exchangesList = document.querySelector('.js-exchange-list') 
   var exchanges = exchangesList.querySelectorAll('.js-exchange');
-  // var shuffledExchanges = Array.prototype.slice.call(exchanges).shuffle();
-  var shuffledExchanges = exchanges;
+  var shuffledExchanges = Array.prototype.slice.call(exchanges).shuffle();
   var fragment = document.createDocumentFragment();
   var shuffledExchangesList = exchangesList.cloneNode(false);
 
