@@ -40,23 +40,6 @@ author:
   twitter: XDAG_Community
   email: communitymanager@xdag.io 
 
-social:
-  links:
-    - https://t.me/dagger_cryptocurrency
-    - https://www.facebook.com/XDAG.Dagger.Community/
-    - https://twitter.com/XDAG_Community
-    - https://discord.gg/YxXUVQJ
-    - https://www.reddit.com/r/xdag/
-    - https://github.com/orgs/XDagger
-
-twitter:
-  card: 
-    regular: summary
-    image: summary_large_image
-  username: XDAG_Community
-
-facebook:
-  publisher: https://www.facebook.com/XDAG.Dagger.Community/
       
 ## Translations
 
