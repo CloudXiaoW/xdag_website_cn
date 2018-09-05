@@ -9,8 +9,8 @@ devNum: 28
 url: https://xdag.top
 baseurl: ""
 
-paginate: 7
-paginate_path: "/blog/page:num"
+#paginate: 7
+#paginate_path: "/blog/page:num"
 
 sass:
   style: compressed
