@@ -13,7 +13,7 @@ community_wallets:
 # Jekyll configuration
 
 
-url: https://xdag.io
+url: https://xdag.top
 baseurl: ""
 
 paginate: 7
@@ -36,7 +36,7 @@ logo: /assets/images/logo.png
 default_image: /assets/images/default-card.png
 
 author:
-  name: Xdag.io
+  name: Xdag.top
   twitter: XDAG_Community
   email: communitymanager@xdag.io 
 
@@ -60,5 +60,5 @@ facebook:
       
 ## Translations
 
-languages: ["en", "zh", "se", "es", "fr", "cs"]
+languages: ["zh", "en", "se", "es", "fr", "cs"]
 exclude_from_localizations: ["assets", "blog", "CNAME", "README.md", "feed.xml", "_posts"]
