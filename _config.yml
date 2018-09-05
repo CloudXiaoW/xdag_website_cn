@@ -2,13 +2,6 @@
 
 devNum: 28
 
-community_wallets:
-  - currency: XDAG
-    address: "FQglVQtb60vQv2DOWEUL7yh3smtj7g1s"
-  - currency: BTC
-    address: "3Jqe2zEtz3ADXWAqyMzzUysVZjYVnAntXr"
-  - currency: ETH
-    address: "0xb5F34fEb083186AfcB1DB1eFdE41eDA1f9BD9fB1"
 
 # Jekyll configuration
 
@@ -21,12 +14,12 @@ paginate_path: "/blog/page:num"
 
 sass:
   style: compressed
-
-plugins:
-  - jekyll-paginate
-
-## Exclude files from build folder
-exclude: ['Rakefile', 'Gemfile', 'Gemfile.lock', 'package.json', 'package-lock.json']
+#
+#plugins:
+##  - jekyll-paginate
+#
+### Exclude files from build folder
+#exclude: ['Rakefile', 'Gemfile', 'Gemfile.lock', 'package.json', 'package-lock.json']
 
 ## SEO
 
