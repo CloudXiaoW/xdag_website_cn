@@ -6,18 +6,18 @@ jQuery(document).ready(function( $ ) {
    * Video overlay
    */
 
-  $('.playvideo').click(function () {
-    $(".mask").show();
-    $(".playbrdr").show();
-    var iframeUrl=$("iframe").attr("src");
-    $("iframe").attr("src","https://www.youtube.com/embed/mUlEVP2MjgQ?autoplay=1")
-  });
-  $('.videoclose').click(function () {
-    $(".mask").hide();
-    $(".playbrdr").hide();
-    var iframeUrl=$("iframe").attr("src");
-    $("iframe").attr("src","https://www.youtube.com/embed/mUlEVP2MjgQ?rel=0&amp;showinfo=0")
-  });
+	$('.playvideo').click(function () {
+		$(".mask").show();
+		$(".playbrdr").show();
+		var iframeUrl=$("iframe").attr("src");
+		$("iframe").attr("src","http://player.youku.com/embed/XMzc0NzIyMTMxNg==")
+	});
+	$('.videoclose').click(function () {
+		$(".mask").hide();
+		$(".playbrdr").hide();
+		var iframeUrl=$("iframe").attr("src");
+		$("iframe").attr("src","")
+	});
 
   /**
    * Banner
