@@ -1,3 +1,63 @@
+- owner: 王博士
+  pools:
+  - address: xdagmine.com:13654
+    fee_pool: 1
+    fee_miner_finder: 1
+    fee_miner_contributor: 1
+    fee_community: 2
+    website: http://info.xdagmine.com
+    name: 基金会矿池
+    state: 139.99.120.77/state.txt
+    country: 中国
+
+- owner: Laywon
+  pools:
+  - address: cn.xdag.vspool.com:13654
+    fee_pool: 1
+    fee_miner_finder: 5
+    fee_miner_contributor: 10
+    fee_community: 2
+    website: https://www.vspool.com/xdag
+    name: vspool.com
+    state: 139.99.124.23/state.txt
+    country: 新加坡
+
+- owner: James-Lu
+  pools:
+  - address: pool.xdagcn.com:13654
+    fee_pool: 1
+    fee_miner_finder: 5
+    fee_miner_contributor: 10
+    fee_community: 2
+    website: http://xdagcn.com/
+    name: xdagcn.com
+    state: 54.39.28.77/state.txt
+    country: 加拿大
+
+- owner: 胖子&wiki
+  pools:
+  - address: vip.xdag.in:13654
+    fee_pool: 1
+    fee_miner_finder: 0
+    fee_miner_contributor: 0
+    fee_community: 2
+    website: http://xdagchain.wiki
+    name: xdagchain.wiki
+    state: 52.83.132.76:8889/state.txt
+    country: 加拿大
+
+- owner: 水哥
+  pools:
+  - address: feipool.xyz:13654
+    fee_pool: 1
+    fee_miner_finder: 0
+    fee_miner_contributor: 0
+    fee_community: 2
+    website: http://feipool.xyz/
+    name: Feipool
+    state: 117.27.159.97:5000/state.txt
+    country: 中国
+
 - owner: AnotherYou
   pools: 
   - address: 109.196.45.218:443
@@ -253,14 +313,4 @@
     state: http://xdag.coolmine.top/state.txt
     country: Singapore
  
-- owner: 水哥
-  pools: 
-  - address: feipool.xyz:13654
-    fee_pool: 1
-    fee_miner_finder: 0
-    fee_miner_contributor: 0
-    fee_community: 2
-    website: http://feipool.xyz/
-    name: Feipool
-    state: 117.27.159.97:5000/state.txt
-    country: China
+

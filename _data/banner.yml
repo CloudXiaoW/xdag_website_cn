@@ -1,3 +1,11 @@
 - img: "/assets/images/banner/1.jpg"
+  title: "XDAG:基于DAG的全新数字加密货币"
+  content: "XDAG是一种新的有向无环图（DAG）技术的应用，它解决了当前区块链技术面临的问题."
+
 - img: "/assets/images/banner/2.png"
+  title: "第一个可挖的DAG"
+  content: "链的设计理念:区块 = 交易 = 地址 <br/>每64秒产生新的货币"
+
 - img: "/assets/images/banner/3.jpg"
+  title: "无预挖、无ICO"
+  content: "XDAG提供了尖端技术，解决了其他加密货币面临的问题提供了去中心化的解决方案。XDAG没有预挖,没有ICO，是一个真正的社区驱动项目，由一个有着共同的目标和具有创新精神的开发团队开发."

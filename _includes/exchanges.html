@@ -1,8 +1,8 @@
 <section class="home-section">
   <div class="container">
     <header class="section-header wow fadeInUp">
-        <h3>{% t home.exchanges %}</h3>
-        <p>{% t home.exchanges_content %}</p>
+        <h3>推荐交易所</h3>
+        <p>买, 卖, 交易XDAG</p>
     </header>
     <ul class="exchanges js-exchange-list">
       {%- for exchange in site.data.exchanges -%}
@@ -11,9 +11,9 @@
             <img class="exchanges__img" src="{{ exchange.logo | absolute_url }}">
             <figcaption class="exchanges__caption">
               <h6 class="exchanges__caption-title">{{ exchange.name }}</h6>
-              <p class="exchanges__caption-body">{% t home.exchanges_{{ forloop.index }}_description %}</p>
+              <p class="exchanges__caption-body">{{ exchange.description }}</p>
               <div class="exchanges__meta">
-                <a class="button button--animated exchanges__button" href="{{ exchange.website }}">{% t global.trade %}</a>
+                <a class="button button--animated exchanges__button" href="{{ exchange.website }}">交易</a>
                 <div class="exchanges__pairs">
                   {% for pair in exchange.pairs %}
                   <a class="exchanges__pair" href="{{ pair.link }}" target="_blank">XDAG / {{ pair.currency }}</a>

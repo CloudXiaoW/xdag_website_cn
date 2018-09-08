@@ -796,3 +796,43 @@ $nav-breakpoint: 1300px;
   cursor: pointer;
   z-index: 999;
 }
+
+.nav-sublevel-icon {
+  display: inline-block;
+  background:url('https://xdag.io/assets/images/lang/selector.svg') center no-repeat;
+  width: 50px;
+  height: 24px;
+  color: #fbfdff;
+  left: -40px!important;
+}
+.imgbrdr{
+  @include clearfix();
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.qrcode{
+  position: absolute;
+  left: 13px;
+  bottom: -250px;
+  height: 250px;
+  z-index: 999999!important;
+  img{
+    height: 250px;
+    opacity: 1;
+  }
+}
+.dn{
+  display: none;
+}
+.lftImg{
+  width: 25%;
+  display: table-cell;
+  padding-right:10px;
+  box-sizing: border-box;
+}
+.qqname{
+  display: table-cell;
+  box-sizing: border-box;
+  padding-top: 10px;
+}

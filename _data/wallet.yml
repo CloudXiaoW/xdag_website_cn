@@ -1,0 +1,42 @@
+- name: Windows 64位钱包
+  content: 64位Windows控制台和GUI可执行文件(x64)。
+  pic: ion-logo-windows
+  href: https://github.com/XDagger/xdag/files/2186514/XDag.x64.zip
+  delay: 0s
+
+- name: Windows 32位钱包
+  content: 32位Windows控制台和GUI可执行文件(x86)。
+  pic: ion-logo-windows
+  href: https://github.com/XDagger/xdag/files/2186515/XDag.x86.zip
+  delay: 0.1s
+
+- name: Windows GPU 挖矿
+  content: Windows GPU 挖矿
+  pic: ion-logo-windows
+  href: https://github.com/jonano614/DaggerGpuMiner/files/2186569/DaggerGpuMiner.0.3.0.zip
+  delay: 0.2s
+  
+- name: MacOS 钱包
+  content: MacOS命令行钱包。
+  pic: ion-logo-apple
+  href: https://github.com/XDagger/xdag/files/2180609/xdag.0.2.5.zip
+  delay: 0.3s
+
+- name: MacOS GPU 挖矿
+  content: GPU 由Jonano MacOS (x64)挖矿
+  pic: ion-logo-apple
+  href: https://github.com/jonano614/DaggerGpuMiner/files/2180530/GpuMiner.0.3.0.zip
+  delay: 0.4s
+
+- name: Android 钱包
+  content: 支持ANDROID 5.0 以上.
+  pic: ion-logo-android
+  href: https://github.com/XDagger/android-wallet/releases/download/release_0.2.1/android_wallet_release_v0.2.1.apk
+  delay: 0.5s
+
+- name: 钱包源码
+  content: XDAG 软件和代码库的源码.
+  pic: ion-ios-color-filter
+  href: https://github.com/XDagger
+  delay: 0.6s
+

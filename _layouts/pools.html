@@ -38,56 +38,64 @@
     </svg>
 
     <header class="section-header">
-      <h3>{% t pools.title %}</h3>
-      <p>{% t pools.description %}</p>
+      <h3>矿池</h3>
+      <p>XDAG重点矿池</p>
     </header>
 
     <div class="text-center">
       <div class="pool__info-header" data-toggle="collapse" href="#reward" role="button" aria-expanded="false" aria-controls="payment">
-        <i class="pool__reward-icon ion-md-information-circle-outline"></i><p>{{ site.translations[site.lang].pools.distribution | newline_to_br }}</p>
+        <i class="pool__reward-icon ion-md-information-circle-outline"></i><p>奖励分发</p>
       </div>
     </div>
     <div class="collapse" id="reward">
-      <div class="pool__info container">{% tf pools/reward-distribution.md %}</div>
+      <div class="pool__info container"><p>当你在一个矿池中挖XDAG并且爆块了， 爆块奖励（1024XDAG）会根据矿池的设置分发出去。以下区域中显示的百分比代表这个规则的奖励都分配到哪了：</p>
+        <ul>
+          <li>矿池费用</li>
+          <li>矿工爆块奖励</li>
+          <li>矿工帮助爆块的奖励</li>
+          <li>社区基金捐献</li>
+        </ul>
+        <p><strong>剩余金额</strong> 支付给 <strong>每个</strong> 在这个池子挖矿的人.</p>
+      </div>
+
     </div>
 
     <table class="pool__table js-pool-list">
       <thead class="pool__header-area js-pool-header">
         <tr>
-          <th class="pool__header">{% t pools.header_1 %}</th>
-          <th class="pool__header">{% t pools.header_2 %}</th>
-          <th class="pool__header">{% t pools.header_3 %}</th>
-          <th class="pool__header">{% t pools.header_4 %}</th>
+          <th class="pool__header">矿池</th>
+          <th class="pool__header">所有者</th>
+          <th class="pool__header">地址</th>
+          <th class="pool__header">位置</th>
           <th class="pool__header text-right">
-            <i class="pool__reward-icon ion-md-information-circle-outline" data-toggle="collapse" href="#reward" role="button" aria-expanded="false" aria-controls="reward"></i>{{ site.translations[site.lang].pools.header_5 | newline_to_br }}
+            <i class="pool__reward-icon ion-md-information-circle-outline" data-toggle="collapse" href="#reward" role="button" aria-expanded="false" aria-controls="reward"></i>奖励分发
           </th>
-          <th class="pool__header">{% t pools.header_6 %}</th>
+          <th class="pool__header">网络状态</th>
         </tr>
       </thead>
       {% for pool_owner in site.data.pool %}
       <tbody class="pool__row-group js-pool-group">
         {% for pool in pool_owner.pools %}
         <tr class="pool__row js-pool">
-          <td class="pool__data pool__data--name"><div class="pool__row-header">{% t pools.header_1 %}:</div>
+          <td class="pool__data pool__data--name"><div class="pool__row-header">矿池:</div>
             {% if pool.website %}<a href="{{ pool.website }}" target="_blank">{% endif %}
               {{ pool.name }}
             {% if pool.website %}</a>{% endif %}
           </td>
-          <td class="pool__data"><div class="pool__row-header">{% t pools.header_2 %}:</div>{{ pool_owner.owner }}</td>
-          <td class="pool__data"><div class="pool__row-header">{% t pools.header_3 %}:</div>{% for address in pool.address %}<span class="pool__address">{{ address }}</span>{% endfor %}</td>
-          {% capture country_translated %}{% t countries.{{ pool.country | downcase }} %}{% endcapture %}
-          <td class="pool__data"><div class="pool__row-header">{% t pools.header_4 %}:</div>{{ country_translated | default: pool.country }}</td>
+          <td class="pool__data"><div class="pool__row-header">所有者:</div>{{ pool_owner.owner }}</td>
+          <td class="pool__data"><div class="pool__row-header">地址:</div>{% for address in pool.address %}<span class="pool__address">{{ address }}</span>{% endfor %}</td>
+          <td class="pool__data"><div class="pool__row-header">位置:</div>{{ pool.country }}</td>
           <td class="pool__data pool__data--reward">
-            <div class="pool__row-header">{% t pools.header_5 %}:</div>
+            <div class="pool__row-header">奖励分发:</div>
             <div class="d-inline-block text-nowrap">
-              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_pool }}% {% t pools.distribution_pool %}">{{ pool.fee_pool }}%</span>
-              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_miner_finder }}% {% t pools.distribution_finder %}">{{ pool.fee_miner_finder }}%</span>
-              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_miner_contributor }}% {% t pools.distribution_contributor %}">{{ pool.fee_miner_contributor }}%</span>
-              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_community }}% {% t pools.distribution_community %}">{{ pool.fee_community }}%</span>
+              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_pool }}% 矿池费用">{{ pool.fee_pool }}%</span>
+              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_miner_finder }}% 爆块奖励">{{ pool.fee_miner_finder }}%</span>
+              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_miner_contributor }}% 贡献者奖励">{{ pool.fee_miner_contributor }}%</span>
+              <span class="pool__reward xdag-tooltip" data-tooltip="{{ pool.fee_community }}% 社区基金捐献">{{ pool.fee_community }}%</span>
             </div>
           </td>
-          <td class="pool__data js-pool-state" data-state="{{ pool.state }}"><div class="pool__row-header">{% t pools.header_6 %}:</div>
-            <span class="pool__state-icon pool__state-icon--load xdag-tooltip" data-tooltip="{% t pools.loading %}">
+          <td class="pool__data js-pool-state" data-state="{{ pool.state }}"><div class="pool__row-header">网络状态:</div>
+            <span class="pool__state-icon pool__state-icon--load xdag-tooltip" data-tooltip="状态载入中......">
               <i class="ion-md-sync"></i>
             </span>
           </td>
@@ -97,17 +105,20 @@
       {% endfor %}
     </table>
 
-    <div class="text-center">{% tf pools/footer.md %}</div>
+    <div class="text-center"><p>所有在此认证的矿池对社区基金都会捐献一定比例的爆块奖励。
+      完整的社区认证的矿池列表可以查看我们的
+      <a href="https://github.com/XDagger/xdag/wiki/White-List">wiki</a>.</p>
+    </div>
   </section>
 </main>
 {% include footer.html %}
 <script type="text/javascript">
   var poolStatusMsg = {
-    on: '{% t pools.status_on %}',
-    sync: '{% t pools.status_sync %}',
-    init: '{% t pools.status_init %}',
-    down: '{% t pools.status_down %}',
-    unknown: '{% t pools.status_unknown %}'
+    on: '可操作的',
+    sync: '同步中',
+    init: '初始化中',
+    down: '下线',
+    unknown: '无回复'
   };
 </script>
 <script src="{{ '/assets/js/pools.js' | absolute_url }}"></script>

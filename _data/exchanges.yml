@@ -1,6 +1,15 @@
+- logo: '/assets/images/exchanges/coinbat.svg'
+  name: Coinbat
+  website: https://www.coinbat.com/
+  description: 家设立在新加坡的一家有国际雄厚资本的交易平台。Xdag作为dag中的bitcoin已经率先登陆。用币飞，币会飞。Coinbat.com立志成为只上好币的加密货币的灯塔。
+  pairs:
+    - currency: CNYT
+      link: https://www.coinbat.com/trade/panel/xdag
+
 - logo: '/assets/images/exchanges/bbx.png'
   name: BBX
   website: https://bbx.com
+  description: 领先的加密货币指数交易平台, 同时也是全球第一支用USDT作保证金的BTC永续合约交易平台。
   pairs: 
     - currency: USDT
       link: https://www.bbx.com/exchange?coinPair=XDAG/USDT
@@ -9,9 +18,3 @@
     - currency: BTC
       link: https://www.bbx.com/exchange?coinPair=XDAG/BTC
 
-- logo: '/assets/images/exchanges/coinbat.svg'
-  name: Coinbat
-  website: https://www.coinbat.com/
-  pairs: 
-    - currency: CNYT
-      link: https://www.coinbat.com/trade/panel/xdag

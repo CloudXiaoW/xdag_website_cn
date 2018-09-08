@@ -1,7 +1,7 @@
 # Site configuration
 
 devNum: 28
-
+community_wallet: bFi6yqUCnDvP2hBSUcHCmfBgJB2Jew6f
 
 # Jekyll configuration
 
@@ -33,8 +33,3 @@ author:
   twitter: XDAG_Community
   email: communitymanager@xdag.io 
 
-      
-## Translations
-
-languages: ["zh", "en", "se", "es", "fr", "cs"]
-exclude_from_localizations: ["assets", "blog", "CNAME", "README.md", "_posts"]

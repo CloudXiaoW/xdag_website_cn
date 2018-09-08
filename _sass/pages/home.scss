@@ -743,16 +743,18 @@
 --------------------------------*/
 .community {
   padding: 60px 0;
+  position: relative;
+  z-index: 99;
 }
 
-.community img {
+.community .lftImg img {
   max-width: 100%;
   opacity: 0.5;
   transition: 0.3s;
   padding: 15px 0;
 }
 
-.community img:hover {
+.community .imgbrdr:hover img {
   opacity: 1;
 }
 

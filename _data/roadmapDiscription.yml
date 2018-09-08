@@ -1,0 +1,57 @@
+- timeframe: 2017年第三季度
+  dates:
+    - date: 2017年12月
+      events:
+        - Windows和Linux的CLI
+        - 挖矿、全节点、矿池发布
+        - 测试网发布
+
+- timeframe: 2018年第一季度
+  dates:
+    - date: 2018年1月
+      events:
+        - 主网上线
+        - GUI钱包集成Windows挖矿程序
+    - date: 2018年2月
+      events:
+        - 社区基于源代码建立了区块浏览器
+        - 原作者移交项目所有权给社区
+        - Xdag.org 完全可以操作
+        - 整理源代码
+    - date: 2018年3月
+      events:
+        - XDAG 0.2.0版钱包发布
+        - XDAG 0.2.1版钱包发布并增加支持MAC
+        - 使用新域名XDAG.IO并上线全新网站
+
+- timeframe: 2018年第二季度
+  dates:
+    - date: 2018年5月
+      events:
+        - XDAG 0.2.0版钱包发布
+        - XDAG 上线BBX 加密货币交易所
+        - XDAG 0.2.3版钱包发布
+    - date: 2018年6月
+      events:
+        - XDAG 0.2.4版钱包发布
+
+- timeframe: 2018年第三季度
+  dates:
+    - date: 2018年7月
+      events:
+        - XDAG 0.3.0版钱包发布，主要性能改进
+        - GPU挖矿0.3.0版本发布，支持MAC
+        - 区块浏览器视觉和性能更新
+    - date: 2018年8月
+      events:
+        - XDAG安卓和iOS钱包发布
+
+- timeframe: 未来
+  dates:
+    - date: ETA 2018
+      events:
+        - 在完成RPC的开发之后，社区将推动交易所上市
+    - date: 未来计划
+      events:
+        - 在完成RPC的开发之后，社区将推动交易所上市
+        - 建立社交媒体和推广

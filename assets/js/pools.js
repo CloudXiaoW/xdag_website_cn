@@ -2,7 +2,7 @@
   var poolList = document.querySelector('.js-pool-list');
   var header = poolList.querySelector('.js-pool-header');
   var pools = poolList.querySelectorAll('.js-pool-group');
-  var shuffledPools = Array.prototype.slice.call(pools).shuffle();
+  var shuffledPools = pools;
   var fragment = document.createDocumentFragment();
   var shuffledPoolList = poolList.cloneNode(false);
   var proxy = 'https://powerful-sea-54885.herokuapp.com/';

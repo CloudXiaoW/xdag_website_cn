@@ -1,5 +1,7 @@
 jQuery(document).ready(function( $ ) {
-
+	$(".imgbrdr").hover(function () {
+		$(this).find(".qrcode").toggleClass("dn");
+	});
   /**
    * Video overlay
    */
@@ -154,7 +156,7 @@ jQuery(document).ready(function( $ ) {
 
   var exchangesList = document.querySelector('.js-exchange-list') 
   var exchanges = exchangesList.querySelectorAll('.js-exchange');
-  var shuffledExchanges = Array.prototype.slice.call(exchanges).shuffle();
+  var shuffledExchanges = exchanges;
   var fragment = document.createDocumentFragment();
   var shuffledExchangesList = exchangesList.cloneNode(false);
 

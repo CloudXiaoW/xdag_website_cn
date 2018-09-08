@@ -16,20 +16,19 @@
     <section id="about">
         <div class="container">
             <header class="section-header">
-                <h3>{% t home.introduction %}</h3>
-                <p>{% t home.introduction_content %}</p>
+                <h3>关于 Dagger</h3>
+                <p>Dagger是基于DAG的新一代分布式分类账本。DAG,有向无环图, 是在分布式的分散环境中在人们中发送数据的另一种方法。这样做没有区块链，允许更大的可扩展性。</p>
             </header>
             <div class="row about-cols">
-                {% for feature in site.translations[site.lang].home.features %}
-                {% assign feature_d = site.data.features[forloop.index0] %}
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="{{ feature_d.delay }}">
+                {% for d in site.data.dagger %}
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="{{d.delay}}">
                     <div class="about-col">
                         <div class="img">
-                            <img src="{{ feature_d.img | absolute_url }}" alt="" class="img-fluid">
+                            <img src="{{d.pic | absolute_url}}" alt="" class="img-fluid">
                             <div class="icon"><i class="ion-ios-unlock"></i></div>
                         </div>
-                        <h2 class="title">{{ feature.title }}</h2>
-                        <p>{{ feature.content }}</p>
+                        <h2 class="title">{{ d.name }}</h2>
+                        <p>{{ d.content }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -39,20 +38,19 @@
     <section class="mining" id="mining">
         <div class="container">
             <header class="section-header wow fadeInUp">
-                <h3>{% t home.mining %}</h3>
-                <p>{% t home.mining_content %}</p>
+                <h3>挖矿快速入门</h3>
+                <p>第一个可挖矿的DAG. 根据以下步骤，如果你遇到任何问题，可以直接联系我们</p>
             </header>
             <div class="row">
-                {% for guide in site.translations[site.lang].home.mining_guides %}
-                {% assign guide_d = site.data.mining-guides[forloop.index0] %}
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="{{ guide_d.delay }}">
-                    <div class="icon"><i class="{{ guide_d.icon }}"></i></div>
+                {% for d in site.data.mine %}
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="{{ d.delay }}">
+                    <div class="icon"><i class="{{ d.pic }}"></i></div>
                     <h4 class="title">
-                        {% if forloop.index0 == 0 %}<a href="#{% t nav.wallet %}">{{ guide.title }}</a>{% endif %}
-                        {% if forloop.index0 == 1 %}<a class="playvideo">{{ guide.title }}</a>{% endif %}
-                        {% if forloop.index0 == 2 %}<a href="{% tl pools %}" class="pool">{{ guide.title }}</a>{% endif %}
+                        {% if d.index == 0 %}<a href="#wallet">{{ d.name }}</a>{% endif%}
+                        {% if d.index == 1 %}<a class="playvideo">{{ d.name }}</a>{% endif%}
+                        {% if d.index == 2 %}<a class="/pools" class="pool">{{ d.name }}</a>{% endif%}
                     </h4>
-                    <p class="description">{{ guide.content }}</p>
+                    <p class="description">{{ d.content }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -61,18 +59,17 @@
     <section id="wallet" class="wallets section-bg" >
         <div class="container">
             <header class="section-header">
-                <h3 class="section-title">{% t home.software %}</h3>
-                <p>{% t home.software_content %}</p>
+                <h3 class="section-title">软件</h3>
+                <p>下载适用于XDAG网络的应用链接</p>
             </header>
             <div class="row justify-content-center portfolio-container">
-                {% for software in site.translations[site.lang].home.software_links %}
-                {% assign software_d = site.data.software[forloop.index0] %}
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="{{ software_d.delay }}">
+                {% for d in site.data.wallet %}
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="{{ d.delay }}">
                     <div class="portfolio-wrap">
                         <div class="portfolio-info">
-                            <div class="icons"><i class="{{ software_d.icon }}"></i></div>
-                            <h4><a href="{{ software_d.href }}" target="_blank">{{ software.title }}</a></h4>
-                            <p>{{ software.content }}</p>
+                            <div class="icons"><i class="{{ d.pic }}"></i></div>
+                            <h4><a href="{{d.href}}" target="_blank">{{ d.name }}</a></h4>
+                            <p>{{ d.content }}</p>
                         </div>
                     </div>
                 </div>
@@ -85,13 +82,20 @@
     <section id="community" class="community wow fadeInUp">
         <div class="container">
             <header class="section-header">
-                <h3>{% t home.community %}</h3>
+                <h3>社区</h3>
             </header>
-            <div class="owl-carousel clients-carousel">
+            <div class="row">
                 {% for d in site.data.community %}
-                <a href="{{ d.href }}" class="owl-{{ d.alt }}" target="_blank">
-                  <img src="{{ d.pic | absolute_url }}" alt="{{ d.alt }} community">
-                </a>
+                <div class="imgbrdr col-md-3 col-sm-6 wow fadeInUp"  data-wow-duration="{{ d.delay }}" style="z-index:{{ d.zindex }}">
+                    <div class="lftImg"><img src="{{ d.pic | relative_url }}"></div>
+                    {% if d.type == 'qq'%}
+                    <div class="qqname">点击扫描二位码<br/>加群{{ d.alt }}</div>
+                    {% endif %}
+                    {% if d.type == 'weixin'%}
+                    <div class="qqname">点击扫描二位码<br/>关注公众号</div>
+                    {% endif %}
+                    <div class="qrcode dn"><img src="{{ d.qrcode | relative_url }}" ></div>
+                </div>
                 {% endfor %}
             </div>
         </div>
