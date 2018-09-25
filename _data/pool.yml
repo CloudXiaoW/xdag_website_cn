@@ -58,6 +58,20 @@
     state: 117.27.159.97:5000/state.txt
     country: 中国
 
+- owner: Nobody
+  pools:
+  - address:
+      - xdagmine.bmwpool.com:13654
+      - bmwpool.com:13654
+    fee_pool: 1
+    fee_miner_finder: 5
+    fee_miner_contributor: 5
+    fee_community: 1
+    website: http://bmwpool.com/
+    name: bmwpool.com
+    state: http://bmwpool.com/state.txt
+    country: Germany
+
 - owner: AnotherYou
   pools: 
   - address: 109.196.45.218:443
