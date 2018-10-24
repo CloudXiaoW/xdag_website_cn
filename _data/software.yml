@@ -19,7 +19,7 @@
   delay: 0.4s
 
 - icon: ion-logo-android
-  href: https://github.com/XDagger/android-wallet/releases/download/release_0.2.1/android_wallet_release_v0.2.1.apk
+  href: https://github.com/XDagger/android-wallet/releases/download/release_0.2.4/android_wallet_release_v0.2.4.apk
   delay: 0.5s
 
 - icon: ion-ios-color-filter
