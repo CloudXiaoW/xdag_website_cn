@@ -6,6 +6,15 @@
     - currency: CNYT
       link: https://www.coinbat.com/trade/panel/xdag
 
+- logo: '/assets/images/exchanges/vbitex.png'
+  name: VBitEX
+  interface_lang: 中文
+  website: http://www.vbitex.com/
+  description: VBEX的使命是为全球范围内的数字资产爱好者和投资在不违反相关法律的前提下，提供专业的国际交易平台和金融产品。
+  pairs:
+    - currency: VB
+      link: http://www.vbitex.com/Home/Qcorders/index/currency/XDAG.html
+      
 - logo: '/assets/images/exchanges/bbx.png'
   name: BBX
   website: https://bbx.com
@@ -17,4 +26,13 @@
       link: https://www.bbx.com/exchange?coinPair=XDAG/ETH
     - currency: BTC
       link: https://www.bbx.com/exchange?coinPair=XDAG/BTC
+
+- logo: '/assets/images/exchanges/firefoxotc.png'
+  name: Firefox OTC
+  interface_lang: 中文
+  website: https://firefoxotc.com/
+  description: Firefox是一个免费可靠的OTC交易平台,其数字化资产柜台交易平台以其专业、安全、方便的优势赢得了全球用户的青睐和信任。
+  pairs:
+    - currency: FFC
+      link: https://firefoxotc.com/exchange
 
