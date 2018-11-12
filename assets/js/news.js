@@ -13,7 +13,8 @@ jQuery(document).ready(function( $ ) {
           $parent.find(".js-toggle-content").addClass("ion-ios-arrow-up");
       }
   }
-
+  $('.news').find('li').eq(0).find(".all").show();
+  $('.news').find('li').eq(0).find(".js-toggle-content").addClass("ion-ios-arrow-up");
   $('.news .rht').click(function() {
       toggleContent($(this).parent());
   });

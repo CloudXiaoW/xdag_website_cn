@@ -247,6 +247,9 @@ em.underline {
 
 .pagination {
   margin: 50px auto 0;
+  padding-bottom: 40px;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -284,5 +287,18 @@ em.underline {
           -ms-flex-pack: center;
               justify-content: center;
     }
+  }
+}
+.linkbrdr{
+
+  text-align: center;
+  margin: 40px auto;
+  display: table;
+  width: 100%;
+  a{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 16px;
   }
 }

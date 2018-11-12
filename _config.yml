@@ -9,14 +9,14 @@ community_wallet: bFi6yqUCnDvP2hBSUcHCmfBgJB2Jew6f
 url: http://xdag.top/
 baseurl: ""
 
-#paginate: 7
-#paginate_path: "/blog/page:num"
+paginate: 7
+paginate_path: "/blog/page:num"
 
 sass:
   style: compressed
-#
-#plugins:
-##  - jekyll-paginate
+
+plugins:
+  - jekyll-paginate
 #
 ### Exclude files from build folder
 #exclude: ['Rakefile', 'Gemfile', 'Gemfile.lock', 'package.json', 'package-lock.json']
