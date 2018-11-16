@@ -6,10 +6,9 @@ image: "/assets/images/posts/xdag3.png"
 summary: 0.3.0矿池版本已于今日发布。
 ---
 
-XDAG v0.3.0下载地址
-https://github.com/XDagger/xdag/releases/tag/0.3.0
-Github地址
-https://github.com/XDagger/xdag
+XDAG v0.3.0下载地址 [https://github.com/XDagger/xdag/releases/tag/0.3.0](https://github.com/XDagger/xdag/releases/tag/0.3.0)
+
+Github地址 [https://github.com/XDagger/xdag](https://github.com/XDagger/xdag)
 
 1. 性能优化
 2. JSON-RPC重写，完善功能并修复问题
