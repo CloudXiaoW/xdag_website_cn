@@ -1,13 +1,13 @@
 - name: Windows 64位钱包
   content: 64位Windows控制台和GUI可执行文件(x64)。
   pic: ion-logo-windows
-  href: https://github.com/XDagger/xdag/files/2186514/XDag.x64.zip
+  href: https://github.com/XDagger/xdag/files/2586909/XDag.x64.zip
   delay: 0s
 
 - name: Windows 32位钱包
   content: 32位Windows控制台和GUI可执行文件(x86)。
   pic: ion-logo-windows
-  href: https://github.com/XDagger/xdag/files/2186515/XDag.x86.zip
+  href: https://github.com/XDagger/xdag/files/2586912/XDag.x86.zip
   delay: 0.1s
 
 - name: Windows GPU 挖矿
@@ -19,7 +19,7 @@
 - name: MacOS 钱包
   content: MacOS命令行钱包。
   pic: ion-logo-apple
-  href: https://github.com/XDagger/xdag/files/2180609/xdag.0.2.5.zip
+  href: https://github.com/XDagger/xdag/files/2586967/xdag.0.3.0.zip
   delay: 0.3s
 
 - name: MacOS GPU 挖矿
